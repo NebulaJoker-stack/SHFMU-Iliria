@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shkolla Iliria - Building Future Leaders</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2563eb',
+secondary: '#64748b'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.stats-card {
+transition: transform 0.3s ease;
+}
+.stats-card:hover {
+transform: translateY(-5px);
+}
+.news-card {
+transition: transform 0.3s ease;
+}
+.news-card:hover {
+transform: translateY(-5px);
+}
+</style>
+</head>
+<body class="font-['Inter']">
+<header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
+<nav class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
+<div class="hidden md:flex items-center gap-8">
+<a href="#" class="text-gray-700 hover:text-primary">About</a>
+<a href="#" class="text-gray-700 hover:text-primary">Academics</a>
+<a href="#" class="text-gray-700 hover:text-primary">Student Life</a>
+<a href="#" class="text-gray-700 hover:text-primary">News</a>
+<a href="#" class="text-gray-700 hover:text-primary">Contact</a>
+</div>
+</div>
+<button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Apply Now</button>
+</div>
+</nav>
+</header>
+<main>
+<section class="relative min-h-screen flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+<div class="container mx-auto px-6 relative">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-bold mb-6 leading-tight">Building Future Leaders Through Excellence in Education</h1>
+<p class="text-xl text-gray-700 mb-8">Join our vibrant academic community where innovation meets tradition, and every student's potential is unleashed.</p>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Discover Iliria</button>
+<button onclick="openVirtualTour()" class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">Virtual Tour</button>
+<div id="virtualTourModal" class="fixed inset-0 bg-black/50 z-50 hidden">
+  <div class="container mx-auto px-4 h-full flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-6xl relative">
+      <button onclick="closeVirtualTour()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-6">Virtual Campus Tour</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="relative rounded-lg overflow-hidden aspect-video">
+              <img src="https://public.readdy.ai/ai/img_res/04ce266760f663a7c478c382a1927340.jpg" alt="Campus Overview" class="w-full h-full object-cover">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <h4 class="text-white font-semibold">Campus Overview</h4>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <button onclick="changeLocation(1)" class="p-2 text-sm text-center rounded-button hover:bg-primary/5 border-2 border-transparent focus:border-primary">Main Building</button>
+              <button onclick="changeLocation(2)" class="p-2 text-sm text-center rounded-button hover:bg-primary/5 border-2 border-transparent focus:border-primary">Library</button>
+              <button onclick="changeLocation(3)" class="p-2 text-sm text-center rounded-button hover:bg-primary/5 border-2 border-transparent focus:border-primary">Sports Complex</button>
+              <button onclick="changeLocation(4)" class="p-2 text-sm text-center rounded-button hover:bg-primary/5 border-2 border-transparent focus:border-primary">Science Labs</button>
+              <button onclick="changeLocation(5)" class="p-2 text-sm text-center rounded-button hover:bg-primary/5 border-2 border-transparent focus:border-primary">Arts Center</button>
+              <button onclick="changeLocation(6)" class="p-2 text-sm text-center rounded-button hover:bg-primary/5 border-2 border-transparent focus:border-primary">Cafeteria</button>
+            </div>
+          </div>
+          <div>
+            <div id="locationInfo" class="space-y-4">
+              <h4 class="text-xl font-semibold">Welcome to Iliria</h4>
+              <p class="text-gray-600">Explore our state-of-the-art campus facilities through this virtual tour. Click on different locations to learn more about each area.</p>
+              <div class="space-y-4 mt-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+                    <i class="ri-building-2-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Modern Facilities</h5>
+                    <p class="text-sm text-gray-600">Our campus features cutting-edge technology and contemporary learning spaces.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+                    <i class="ri-leaf-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Green Campus</h5>
+                    <p class="text-sm text-gray-600">Beautiful outdoor spaces and environmentally sustainable design.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+                    <i class="ri-shield-check-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold">Safe Environment</h5>
+                    <p class="text-sm text-gray-600">24/7 security and modern safety systems throughout the campus.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Welcome to Shkolla Iliria</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Where academic excellence meets character development, preparing students for success in an ever-changing world.</p>
+</div>
+<div class="grid md:grid-cols-4 gap-8">
+<div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2">25+</div>
+<div class="text-gray-600">Years of Excellence</div>
+</div>
+<div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2">98%</div>
+<div class="text-gray-600">Student Success Rate</div>
+</div>
+<div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2">120+</div>
+<div class="text-gray-600">Qualified Teachers</div>
+</div>
+<div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2">2000+</div>
+<div class="text-gray-600">Active Students</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Academic Excellence</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Our comprehensive curriculum and innovative teaching methods prepare students for success in an ever-evolving global landscape.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 mb-16">
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-book-open-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Core Subjects</h3>
+<ul class="space-y-3 text-gray-600">
+<li>• Mathematics & Sciences</li>
+<li>• Languages & Literature</li>
+<li>• Social Studies & History</li>
+<li>• Arts & Music</li>
+<li>• Physical Education</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-microscope-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Special Programs</h3>
+<ul class="space-y-3 text-gray-600">
+<li>• Advanced Placement Courses</li>
+<li>• STEM Innovation Lab</li>
+<li>• Language Immersion</li>
+<li>• Entrepreneurship Track</li>
+<li>• Digital Arts & Media</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-group-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Teaching Methods</h3>
+<ul class="space-y-3 text-gray-600">
+<li>• Project-Based Learning</li>
+<li>• Small Group Instruction</li>
+<li>• Technology Integration</li>
+<li>• Experiential Learning</li>
+<li>• Individual Mentoring</li>
+</ul>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg p-12 mb-16">
+<h3 class="text-2xl font-semibold mb-8 text-center">Extracurricular Activities</h3>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+<i class="ri-basketball-line text-primary text-xl"></i>
+</div>
+<h4 class="font-semibold mb-2">Sports</h4>
+<ul class="text-gray-600 text-sm space-y-1">
+<li>• Basketball Team</li>
+<li>• Soccer Club</li>
+<li>• Swimming</li>
+<li>• Athletics</li>
+</ul>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+<i class="ri-palette-line text-primary text-xl"></i>
+</div>
+<h4 class="font-semibold mb-2">Arts & Culture</h4>
+<ul class="text-gray-600 text-sm space-y-1">
+<li>• Drama Club</li>
+<li>• Art Workshop</li>
+<li>• Music Ensemble</li>
+<li>• Cultural Society</li>
+</ul>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+<i class="ri-robot-line text-primary text-xl"></i>
+</div>
+<h4 class="font-semibold mb-2">Technology</h4>
+<ul class="text-gray-600 text-sm space-y-1">
+<li>• Robotics Club</li>
+<li>• Coding Workshop</li>
+<li>• Tech Innovation</li>
+<li>• Digital Media</li>
+</ul>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+<i class="ri-earth-line text-primary text-xl"></i>
+</div>
+<h4 class="font-semibold mb-2">Community</h4>
+<ul class="text-gray-600 text-sm space-y-1">
+<li>• Debate Team</li>
+<li>• Environmental Club</li>
+<li>• Volunteer Group</li>
+<li>• Student Council</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<img src="https://public.readdy.ai/ai/img_res/6ae78a9ec99c7ca7dee2e126e8ef3dcd.jpg" alt="Interactive Learning" class="rounded-lg shadow-lg w-full h-full object-cover">
+</div>
+<div>
+<h3 class="text-2xl font-semibold mb-6">Our Educational Approach</h3>
+<p class="text-gray-600 mb-6">At Shkolla Iliria, we believe in fostering a dynamic learning environment that combines traditional academic excellence with innovative teaching methods. Our approach emphasizes critical thinking, creativity, and practical application of knowledge.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Personalized Learning Paths</h4>
+<p class="text-gray-600 text-sm">Tailored education plans that consider each student's unique abilities and goals.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Technology Integration</h4>
+<p class="text-gray-600 text-sm">Modern tools and resources to enhance learning and prepare for the digital age.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Global Perspective</h4>
+<p class="text-gray-600 text-sm">International curriculum elements that broaden students' worldview.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 mb-16">
+<div>
+<h3 class="text-2xl font-semibold mb-6">Our History</h3>
+<p class="text-gray-600 mb-6">Founded in 1998, Shkolla Iliria has grown from a small local school to one of Albania's leading educational institutions. For over two decades, we have been committed to providing exceptional education that combines traditional values with modern teaching methods.</p>
+<p class="text-gray-600">Throughout our journey, we have continuously evolved our curriculum and facilities to meet the changing needs of our students while maintaining our core commitment to academic excellence and character development.</p>
+</div>
+<div>
+<img src="https://public.readdy.ai/ai/img_res/01dd9b1b8197acea7fd108e025bf2090.jpg" alt="School History" class="rounded-lg shadow-lg w-full h-full object-cover">
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8 mb-16">
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold mb-4">Our Vision</h3>
+<p class="text-gray-600">To be the leading educational institution that nurtures future leaders who are intellectually curious, morally upright, and globally minded.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+<p class="text-gray-600">To provide a comprehensive education that develops students' academic abilities, character, and leadership skills in a supportive and innovative learning environment.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold mb-4">Our Values</h3>
+<ul class="text-gray-600 space-y-2">
+<li>• Excellence in all endeavors</li>
+<li>• Integrity and ethical behavior</li>
+<li>• Respect for diversity</li>
+<li>• Community engagement</li>
+<li>• Innovation and creativity</li>
+</ul>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg p-12">
+<h3 class="text-2xl font-semibold mb-8 text-center">Our Leadership Team</h3>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/39f58e8262a07eb77ff0582f1f90779e.jpg" alt="Principal" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+<h4 class="text-lg font-semibold mb-2">Dr. Elena Kovaci</h4>
+<p class="text-primary font-medium mb-2">Principal</p>
+<p class="text-gray-600 text-sm">Ph.D. in Educational Leadership with 20+ years of experience in education administration.</p>
+</div>
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/d4fe1b8848df2e9f7c6a1fa32c291eb1.jpg" alt="Vice Principal" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+<h4 class="text-lg font-semibold mb-2">Mr. Adrian Berisha</h4>
+<p class="text-primary font-medium mb-2">Vice Principal</p>
+<p class="text-gray-600 text-sm">M.Ed. in Curriculum Development, specializing in STEM education innovation.</p>
+</div>
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/e0b6ae17ccd7cdb74a83b4fb4053d0fa.jpg" alt="Academic Director" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+<h4 class="text-lg font-semibold mb-2">Mrs. Mira Hoxha</h4>
+<p class="text-primary font-medium mb-2">Academic Director</p>
+<p class="text-gray-600 text-sm">Expert in international education with focus on student achievement and well-being.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16">Our Campus</h2>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="relative rounded-lg overflow-hidden group">
+<img src="https://public.readdy.ai/ai/img_res/86db78e393e1b6e8e340bf31c78164fb.jpg" alt="Modern Classroom" class="w-full h-64 object-cover">
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="text-white text-center p-4">
+<h3 class="font-semibold mb-2">Modern Classrooms</h3>
+<p class="text-sm">State-of-the-art learning spaces</p>
+</div>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden group">
+<img src="https://public.readdy.ai/ai/img_res/afdfe05fad9855321a8fd883266f832a.jpg" alt="Science Lab" class="w-full h-64 object-cover">
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="text-white text-center p-4">
+<h3 class="font-semibold mb-2">Science Labs</h3>
+<p class="text-sm">Equipped for hands-on learning</p>
+</div>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden group">
+<img src="https://public.readdy.ai/ai/img_res/614c188f8660ce11cd9501a391b8f4c3.jpg" alt="Sports Facility" class="w-full h-64 object-cover">
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="text-white text-center p-4">
+<h3 class="font-semibold mb-2">Sports Facilities</h3>
+<p class="text-sm">Supporting athletic excellence</p>
+</div>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden group">
+<img src="https://public.readdy.ai/ai/img_res/eb4ddacb38b2e29ad85287fd0c31b483.jpg" alt="Library" class="w-full h-64 object-cover">
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="text-white text-center p-4">
+<h3 class="font-semibold mb-2">Library</h3>
+<p class="text-sm">Resource-rich learning hub</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16">Student Life at Iliria</h2>
+<div class="grid md:grid-cols-3 gap-8 mb-16">
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-calendar-event-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Events & Activities</h3>
+<ul class="space-y-3 text-gray-600">
+<li>• Cultural Festivals</li>
+<li>• Academic Competitions</li>
+<li>• Leadership Workshops</li>
+<li>• Community Service</li>
+<li>• International Exchange Programs</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-trophy-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Sports & Competitions</h3>
+<ul class="space-y-3 text-gray-600">
+<li>• National Basketball Champions 2024</li>
+<li>• Regional Soccer Tournament Winners</li>
+<li>• Swimming Team Achievements</li>
+<li>• Athletics Records</li>
+<li>• Inter-school Championships</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-group-2-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Student Clubs</h3>
+<ul class="space-y-3 text-gray-600">
+<li>• Science & Technology Club</li>
+<li>• Arts & Photography Society</li>
+<li>• Environmental Awareness Group</li>
+<li>• Debate & Public Speaking</li>
+<li>• Music & Performance Arts</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-12 mb-16">
+<h3 class="text-2xl font-semibold mb-8 text-center">Student Testimonials</h3>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/ef0eb41d38c293fdb31a6dbde45f7600.jpg" alt="Student 1" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+<p class="text-gray-600 italic mb-4">"The diverse range of activities and supportive environment at Iliria has helped me discover my passion for science and leadership."</p>
+<h4 class="font-semibold">Ana Malaj</h4>
+<p class="text-sm text-gray-500">Grade 12 Student</p>
+</div>
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/88ebf3a0967a670350cdd61ef0dc6967.jpg" alt="Student 2" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+<p class="text-gray-600 italic mb-4">"Being part of the sports team has taught me valuable lessons about teamwork, discipline, and perseverance."</p>
+<h4 class="font-semibold">Erion Krasniqi</h4>
+<p class="text-sm text-gray-500">Grade 11 Student</p>
+</div>
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/886b2f2d5d9c8198cb84eab9e2032f41.jpg" alt="Student 3" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+<p class="text-gray-600 italic mb-4">"The international exchange program opened my eyes to new cultures and helped me grow both academically and personally."</p>
+<h4 class="font-semibold">Elisa Prifti</h4>
+<p class="text-sm text-gray-500">Grade 10 Student</p>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<img src="https://public.readdy.ai/ai/img_res/822cbdae76f7180fa8c5f53230d2122b.jpg" alt="Student Life" class="rounded-lg shadow-lg w-full h-full object-cover">
+</div>
+<div>
+<h3 class="text-2xl font-semibold mb-6">Life at Iliria</h3>
+<p class="text-gray-600 mb-6">At Shkolla Iliria, student life extends far beyond the classroom. We believe in nurturing well-rounded individuals through a rich tapestry of experiences, activities, and opportunities for personal growth.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Vibrant Community</h4>
+<p class="text-gray-600 text-sm">A diverse and inclusive environment where every student can thrive and belong.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Leadership Opportunities</h4>
+<p class="text-gray-600 text-sm">Multiple platforms for students to develop and practice leadership skills.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Holistic Development</h4>
+<p class="text-gray-600 text-sm">Balance of academic, athletic, artistic, and personal growth opportunities.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16">Latest News & Updates</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<div class="grid gap-8">
+<div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
+<img src="https://public.readdy.ai/ai/img_res/277e505244037ac34817ac589bc3a067.jpg" alt="Science Fair" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="text-sm text-gray-500 mb-2">March 10, 2025</div>
+<h3 class="text-xl font-semibold mb-2">Annual Science Fair Showcases Student Innovation</h3>
+<p class="text-gray-600 mb-4">Students present groundbreaking projects at this year's science exhibition.</p>
+<a href="#" class="text-primary font-medium hover:underline">Read More</a>
+</div>
+</div>
+<div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
+<img src="https://public.readdy.ai/ai/img_res/ea8df0d9dc0e830e24441a3a74eff261.jpg" alt="Theater Performance" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="text-sm text-gray-500 mb-2">March 8, 2025</div>
+<h3 class="text-xl font-semibold mb-2">Spring Theater Production: "The Tempest"</h3>
+<p class="text-gray-600 mb-4">Drama department brings Shakespeare's classic to life with modern twist.</p>
+<a href="#" class="text-primary font-medium hover:underline">Read More</a>
+</div>
+</div>
+<div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
+<img src="https://public.readdy.ai/ai/img_res/35c5a0c5d5a96dffc3860bd7cc10c1ec.jpg" alt="Academic Awards" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="text-sm text-gray-500 mb-2">March 5, 2025</div>
+<h3 class="text-xl font-semibold mb-2">Students Excel in National Academic Competition</h3>
+<p class="text-gray-600 mb-4">Our students bring home top honors in mathematics and science.</p>
+<a href="#" class="text-primary font-medium hover:underline">Read More</a>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="bg-white rounded-lg shadow-sm p-8">
+<h3 class="text-2xl font-semibold mb-6">Upcoming Events</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="text-center">
+<div class="bg-primary/10 text-primary font-semibold rounded-lg p-3 w-16">
+<div class="text-2xl">15</div>
+<div class="text-sm">MAR</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold">Parent-Teacher Conference</h4>
+<p class="text-gray-600 text-sm">Annual meeting to discuss student progress</p>
+<p class="text-sm text-primary mt-1">2:00 PM - 6:00 PM</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-center">
+<div class="bg-primary/10 text-primary font-semibold rounded-lg p-3 w-16">
+<div class="text-2xl">20</div>
+<div class="text-sm">MAR</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold">Sports Day 2025</h4>
+<p class="text-gray-600 text-sm">Annual athletic competition and family day</p>
+<p class="text-sm text-primary mt-1">9:00 AM - 4:00 PM</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-center">
+<div class="bg-primary/10 text-primary font-semibold rounded-lg p-3 w-16">
+<div class="text-2xl">25</div>
+<div class="text-sm">MAR</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold">Art Exhibition Opening</h4>
+<p class="text-gray-600 text-sm">Showcasing student artwork and performances</p>
+<p class="text-sm text-primary mt-1">5:00 PM - 8:00 PM</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-2xl font-semibold mb-6">Announcements</h3>
+<div class="space-y-4">
+<div class="border-l-4 border-primary pl-4">
+<div class="text-sm text-gray-500">March 12, 2025</div>
+<h4 class="font-semibold">2025-2026 Academic Calendar Released</h4>
+<p class="text-gray-600 text-sm">View important dates and plan ahead for the next academic year.</p>
+</div>
+<div class="border-l-4 border-primary pl-4">
+<div class="text-sm text-gray-500">March 11, 2025</div>
+<h4 class="font-semibold">Summer Program Registration Open</h4>
+<p class="text-gray-600 text-sm">Enroll now for our enriching summer learning programs.</p>
+</div>
+<div class="border-l-4 border-primary pl-4">
+<div class="text-sm text-gray-500">March 9, 2025</div>
+<h4 class="font-semibold">New STEM Lab Equipment Arrival</h4>
+<p class="text-gray-600 text-sm">Expanding our facilities with state-of-the-art technology.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl font-bold text-center mb-16">Contact Us</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<div class="bg-white rounded-lg shadow-sm p-8">
+<h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+<form id="contactForm" class="space-y-6">
+<div>
+<label class="block text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 rounded-button border border-gray-200 focus:border-primary focus:outline-none" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 rounded-button border border-gray-200 focus:border-primary focus:outline-none" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Subject</label>
+<select class="w-full px-4 py-2 rounded-button border border-gray-200 focus:border-primary focus:outline-none pr-8" required>
+<option value="">Select a subject</option>
+<option value="admission">Admission Inquiry</option>
+<option value="academic">Academic Information</option>
+<option value="general">General Inquiry</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Message</label>
+<textarea class="w-full px-4 py-2 rounded-button border border-gray-200 focus:border-primary focus:outline-none h-32" required></textarea>
+</div>
+<button type="submit" class="w-full px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Send Message</button>
+</form>
+</div>
+</div>
+<div>
+<div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+<h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Address</h4>
+<p class="text-gray-600">123 Education Street, Tirana, Albania</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Phone</h4>
+<p class="text-gray-600">+355 XX XXX XXX</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Email</h4>
+<p class="text-gray-600">info@iliria.edu.al</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">Office Hours</h4>
+<p class="text-gray-600">Monday - Friday: 8:00 AM - 4:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="h-[400px] w-full relative">
+<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Location Map" class="absolute inset-0 w-full h-full object-cover">
+<div class="absolute inset-0 flex items-center justify-center bg-black/50">
+<button class="px-6 py-3 bg-white text-primary !rounded-button hover:bg-gray-100 whitespace-nowrap">
+<i class="ri-map-2-line mr-2"></i>Open in Google Maps
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-primary text-white">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-3xl font-bold mb-6">Join Our Academic Family</h2>
+<p class="text-xl mb-8 max-w-2xl mx-auto">Take the first step towards an exceptional education journey. Applications for the 2025-2026 academic year are now open.</p>
+<div class="flex gap-4 justify-center">
+<button class="px-8 py-3 bg-white text-primary !rounded-button hover:bg-gray-100 whitespace-nowrap">Apply Now</button>
+<button class="px-8 py-3 border-2 border-white text-white !rounded-button hover:bg-white/10 whitespace-nowrap">Learn More</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-16">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12">
+<div>
+<h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+<div class="space-y-2">
+<p>123 Education Street</p>
+<p>Tirana, Albania</p>
+<p>Phone: +355 XX XXX XXX</p>
+<p>Email: info@iliria.edu.al</p>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#" class="hover:text-primary">About Us</a></li>
+<li><a href="#" class="hover:text-primary">Admissions</a></li>
+<li><a href="#" class="hover:text-primary">Academic Programs</a></li>
+<li><a href="#" class="hover:text-primary">Student Life</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+<div class="flex gap-4">
+<a href="#" class="hover:text-primary"><i class="ri-facebook-fill"></i></a>
+<a href="#" class="hover:text-primary"><i class="ri-twitter-fill"></i></a>
+<a href="#" class="hover:text-primary"><i class="ri-instagram-fill"></i></a>
+<a href="#" class="hover:text-primary"><i class="ri-linkedin-fill"></i></a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+<p class="mb-4">Stay updated with our latest news and events.</p>
+<div class="flex gap-2">
+<input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-button bg-gray-800 border-none text-white w-full">
+<button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p>&copy; 2025 Shkolla Iliria. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+<i class="ri-arrow-up-line"></i>
+</button>
+<script>
+const locations = {
+  1: {
+    image: "https://public.readdy.ai/ai/img_res/e5a4a15713f63325e4c051c9be55c0e3.jpg",
+    title: "Main Building",
+    description: "Our main building houses administrative offices, modern classrooms, and collaborative spaces. The building features state-of-the-art technology integration and comfortable learning environments.",
+    features: [
+      {icon: "ri-computer-line", title: "Smart Classrooms", desc: "Interactive whiteboards and multimedia systems"},
+      {icon: "ri-group-line", title: "Meeting Spaces", desc: "Collaborative areas for group work"},
+      {icon: "ri-wifi-line", title: "Full Connectivity", desc: "High-speed internet throughout"}
+    ]
+  },
+  2: {
+    image: "https://public.readdy.ai/ai/img_res/9a1d57d99df72aec442177c2428715e6.jpg",
+    title: "Library",
+    description: "Our library is a modern learning hub with extensive print and digital resources. It provides quiet study spaces, group work areas, and access to online databases.",
+    features: [
+      {icon: "ri-book-line", title: "Vast Collection", desc: "Over 20,000 books and resources"},
+      {icon: "ri-database-2-line", title: "Digital Access", desc: "Online journals and databases"},
+      {icon: "ri-focus-2-line", title: "Study Zones", desc: "Individual and group study areas"}
+    ]
+  },
+  3: {
+    image: "https://public.readdy.ai/ai/img_res/f1ec5b1fb33bc985fd43ffcee49283df.jpg",
+    title: "Sports Complex",
+    description: "Our sports complex includes indoor and outdoor facilities for various sports activities. Features include a gymnasium, swimming pool, and fitness center.",
+    features: [
+      {icon: "ri-basketball-line", title: "Indoor Courts", desc: "Basketball, volleyball, and more"},
+      {icon: "ri-run-line", title: "Fitness Center", desc: "Modern exercise equipment"},
+      {icon: "ri-swimming-pool-line", title: "Swimming Pool", desc: "Olympic-sized indoor pool"}
+    ]
+  },
+  4: {
+    image: "https://public.readdy.ai/ai/img_res/0e33ad57baa77f0283df0d0e9a8f54ad.jpg",
+    title: "Science Labs",
+    description: "Our science laboratories are equipped with the latest technology and safety features. Students engage in hands-on experiments and research projects.",
+    features: [
+      {icon: "ri-test-tube-line", title: "Advanced Equipment", desc: "Modern scientific instruments"},
+      {icon: "ri-microscope-line", title: "Research Facilities", desc: "Specialized research areas"},
+      {icon: "ri-shield-check-line", title: "Safety First", desc: "Complete safety protocols"}
+    ]
+  },
+  5: {
+    image: "https://public.readdy.ai/ai/img_res/4bedb70167db08971bb098d896574809.jpg",
+    title: "Arts Center",
+    description: "Our arts center provides spaces for visual arts, music, and performing arts. It includes studios, practice rooms, and a performance hall.",
+    features: [
+      {icon: "ri-palette-line", title: "Art Studios", desc: "Fully equipped creative spaces"},
+      {icon: "ri-music-2-line", title: "Music Rooms", desc: "Sound-proof practice areas"},
+      {icon: "ri-movie-2-line", title: "Performance Hall", desc: "Professional stage and seating"}
+    ]
+  },
+  6: {
+    image: "https://public.readdy.ai/ai/img_res/adc05cf7a69f17e258a33cbb0159e5b5.jpg",
+    title: "Cafeteria",
+    description: "Our cafeteria provides healthy and diverse meal options in a comfortable dining environment. The space also serves as a social hub for students.",
+    features: [
+      {icon: "ri-restaurant-line", title: "Healthy Options", desc: "Balanced meal choices"},
+      {icon: "ri-space-ship-line", title: "Modern Space", desc: "Comfortable seating areas"},
+      {icon: "ri-recycle-line", title: "Eco-Friendly", desc: "Sustainable practices"}
+    ]
+  }
+};
+function openVirtualTour() {
+  document.getElementById('virtualTourModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+function closeVirtualTour() {
+  document.getElementById('virtualTourModal').classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+function changeLocation(id) {
+  const location = locations[id];
+  const image = document.querySelector('#virtualTourModal img');
+  const info = document.getElementById('locationInfo');
+  
+  image.src = location.image;
+  image.alt = location.title;
+  
+  info.innerHTML = `
+    <h4 class="text-xl font-semibold">${location.title}</h4>
+    <p class="text-gray-600">${location.description}</p>
+    <div class="space-y-4 mt-6">
+      ${location.features.map(feature => `
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0">
+            <i class="${feature.icon} text-primary"></i>
+          </div>
+          <div>
+            <h5 class="font-semibold">${feature.title}</h5>
+            <p class="text-sm text-gray-600">${feature.desc}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+backToTop.style.opacity = '1';
+} else {
+backToTop.style.opacity = '0';
+}
+});
+backToTop.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+e.preventDefault();
+const form = e.target;
+const formData = new FormData(form);
+const data = Object.fromEntries(formData);
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/50 z-50';
+successMessage.innerHTML = `
+<div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full mx-4">
+<div class="text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">Message Sent Successfully</h3>
+<p class="text-gray-600 mb-6">Thank you for contacting us. We will get back to you soon.</p>
+<button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Close</button>
+</div>
+</div>
+`;
+document.body.appendChild(successMessage);
+successMessage.querySelector('button').addEventListener('click', () => {
+successMessage.remove();
+form.reset();
+});
+});
+</script>
+</body>
+</html>
