@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Shkolla Iliria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#64748b'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    .contact-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .form-input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+  </style>
+</head>
+<body class="font-['Inter']">
+  <header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-12">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+            <a href="#" class="text-gray-700 hover:text-primary">About</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Academics</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Student Life</a>
+            <a href="#" class="text-primary font-medium">Contact</a>
+          </div>
+        </div>
+        <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Apply Now</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+      <div class="container mx-auto px-6 relative">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold mb-6 leading-tight">We'd Love to Hear From You</h1>
+          <p class="text-xl text-gray-700 mb-8">Our team is ready to answer your questions about admissions, programs, or any other inquiries about Shkolla Iliria.</p>
+          <div class="flex gap-4">
+            <a href="#contact-form" class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Contact Us</a>
+            <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">Visit Campus</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Contact Options</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Choose the most convenient way to get in touch with our team</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-phone-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Phone</h3>
+            <p class="text-gray-600 mb-2">General Inquiries</p>
+            <p class="text-lg font-medium mb-4">+355 XX XXX XXXX</p>
+            <p class="text-gray-600 mb-2">Admissions Office</p>
+            <p class="text-lg font-medium">+355 XX XXX XXXX</p>
+            <div class="mt-6">
+              <p class="text-sm text-gray-500">Mon-Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+          
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-mail-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Email</h3>
+            <p class="text-gray-600 mb-2">General Inquiries</p>
+            <p class="text-lg font-medium mb-4">info@iliria.edu.al</p>
+            <p class="text-gray-600 mb-2">Admissions</p>
+            <p class="text-lg font-medium">admissions@iliria.edu.al</p>
+            <div class="mt-6">
+              <p class="text-sm text-gray-500">Typically respond within 24 hours</p>
+            </div>
+          </div>
+          
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-map-pin-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Visit Us</h3>
+            <p class="text-gray-600 mb-4">123 Education Street<br>Tirana, Albania</p>
+            <div class="mt-6">
+              <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Get Directions</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-form" class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Send Us a Message</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Fill out the form below and we'll get back to you as soon as possible</p>
+          </div>
+          
+          <form class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name <span class="text-primary">*</span></label>
+                <input type="text" id="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+              </div>
+              <div>
+                <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name <span class="text-primary">*</span></label>
+                <input type="text" id="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email <span class="text-primary">*</span></label>
+                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+              </div>
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input focus:outline-none focus:ring-2 focus:ring-primary/50">
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label for="subject" class="block text-gray-700 font-medium mb-2">Subject <span class="text-primary">*</span></label>
+              <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="admissions">Admissions Inquiry</option>
+                <option value="academics">Academic Programs</option>
+                <option value="student-life">Student Life</option>
+                <option value="faculty">Faculty/Staff</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="mb-6">
+              <label for="message" class="block text-gray-700 font-medium mb-2">Message <span class="text-primary">*</span></label>
+              <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input focus:outline-none focus:ring-2 focus:ring-primary/50" required></textarea>
+            </div>
+            
+            <div class="mb-6">
+              <div class="flex items-start">
+                <div class="flex items-center h-5">
+                  <input id="newsletter" name="newsletter" type="checkbox" class="focus:ring-primary h-4 w-4 text-primary border-gray-300 rounded">
+                </div>
+                <div class="ml-3 text-sm">
+                  <label for="newsletter" class="text-gray-600">I'd like to receive updates and newsletters from Shkolla Iliria</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <button type="submit" class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Department Contacts -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Department Contacts</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Connect directly with specific departments at our school</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Admissions Office</h3>
+            <p class="text-gray-600 mb-4">Questions about applications, requirements, and enrollment.</p>
+            <div class="space-y-2">
+              <p class="flex items-center text-gray-700">
+                <i class="ri-phone-line text-primary mr-2"></i> +355 XX XXX XXXX
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-mail-line text-primary mr-2"></i> admissions@iliria.edu.al
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-user-line text-primary mr-2"></i> Contact: Ms. Elisa Marku
+              </p>
+            </div>
+          </div>
+          
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Academic Office</h3>
+            <p class="text-gray-600 mb-4">Curriculum, academic policies, and program information.</p>
+            <div class="space-y-2">
+              <p class="flex items-center text-gray-700">
+                <i class="ri-phone-line text-primary mr-2"></i> +355 XX XXX XXXX
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-mail-line text-primary mr-2"></i> academics@iliria.edu.al
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-user-line text-primary mr-2"></i> Contact: Mr. Adrian Berisha
+              </p>
+            </div>
+          </div>
+          
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Student Affairs</h3>
+            <p class="text-gray-600 mb-4">Student services, counseling, and extracurricular activities.</p>
+            <div class="space-y-2">
+              <p class="flex items-center text-gray-700">
+                <i class="ri-phone-line text-primary mr-2"></i> +355 XX XXX XXXX
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-mail-line text-primary mr-2"></i> studentlife@iliria.edu.al
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-user-line text-primary mr-2"></i> Contact: Mrs. Mira Hoxha
+              </p>
+            </div>
+          </div>
+          
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Athletics Department</h3>
+            <p class="text-gray-600 mb-4">Sports teams, physical education, and athletic facilities.</p>
+            <div class="space-y-2">
+              <p class="flex items-center text-gray-700">
+                <i class="ri-phone-line text-primary mr-2"></i> +355 XX XXX XXXX
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-mail-line text-primary mr-2"></i> athletics@iliria.edu.al
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-user-line text-primary mr-2"></i> Contact: Mr. Besnik Dervishi
+              </p>
+            </div>
+          </div>
+          
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Alumni Relations</h3>
+            <p class="text-gray-600 mb-4">Connecting graduates and organizing alumni events.</p>
+            <div class="space-y-2">
+              <p class="flex items-center text-gray-700">
+                <i class="ri-phone-line text-primary mr-2"></i> +355 XX XXX XXXX
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-mail-line text-primary mr-2"></i> alumni@iliria.edu.al
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-user-line text-primary mr-2"></i> Contact: Ms. Anisa Leka
+              </p>
+            </div>
+          </div>
+          
+          <div class="contact-card bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Business Office</h3>
+            <p class="text-gray-600 mb-4">Tuition, billing, and financial matters.</p>
+            <div class="space-y-2">
+              <p class="flex items-center text-gray-700">
+                <i class="ri-phone-line text-primary mr-2"></i> +355 XX XXX XXXX
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-mail-line text-primary mr-2"></i> finance@iliria.edu.al
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-user-line text-primary mr-2"></i> Contact: Mr. Endrit Kovaçi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Map -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Our Location</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Visit our campus in the heart of Tirana</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">Campus Address</h3>
+              <p class="text-gray-600 mb-6">123 Education Street<br>Tirana, Albania</p>
+              
+              <div class="space-y-4 mb-8">
+                <h4 class="text-lg font-semibold">Office Hours</h4>
+                <p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p class="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
+                <p class="text-gray-600">Sunday: Closed</p>
+              </div>
+              
+              <h4 class="text-lg font-semibold mb-4">Parking Information</h4>
+              <p class="text-gray-600 mb-6">Visitor parking is available in front of the main administration building.</p>
+              
+              <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Get Directions</button>
+            </div>
+            <div>
+              <!-- Replace with your actual map embed code -->
+              <div class="bg-gray-200 h-full rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.363734371744!2d19.81875831542593!3d41.32738297926988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE5JzM4LjYiTiAxOcKwNDknMTMuNiJF!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="min-h-[400px]">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-primary text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Still Have Questions?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Our admissions team is ready to help you with any questions about Shkolla Iliria.</p>
+        <div class="flex gap-4 justify-center">
+          <button class="px-8 py-3 bg-white text-primary !rounded-button hover:bg-gray-100 whitespace-nowrap">Call Admissions</button>
+          <button class="px-8 py-3 border-2 border-white text-white !rounded-button hover:bg-white/10 whitespace-nowrap">Email Us</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <div class="space-y-2">
+            <p>123 Education Street</p>
+            <p>Tirana, Albania</p>
+            <p>Phone: +355 XX XXX XXX</p>
+            <p>Email: info@iliria.edu.al</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary">About Us</a></li>
+            <li><a href="#" class="hover:text-primary">Admissions</a></li>
+            <li><a href="#" class="hover:text-primary">Academic Programs</a></li>
+            <li><a href="#" class="hover:text-primary">Student Life</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-primary"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-twitter-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-instagram-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+          <p class="mb-4">Stay updated with our latest news and events.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-button bg-gray-800 border-none text-white w-full">
+            <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>&copy; 2025 Shkolla Iliria. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.style.opacity = '1';
+      } else {
+        backToTop.style.opacity = '0';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Simple form validation
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form values
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Simple validation
+        if (!firstName || !lastName || !email || !subject || !message) {
+          alert('Please fill in all required fields');
+          return;
+        }
+        
+        // Here you would typically send the form data to your server
+        // For this example, we'll just show a success message
+        alert('Thank you for your message! We will contact you soon.');
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

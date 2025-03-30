@@ -1,300 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shkolla Iliria - Building Future Leaders</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#64748b'
-                    },
-                    borderRadius: {
-                        'none': '0px',
-                        'sm': '4px',
-                        DEFAULT: '8px',
-                        'md': '12px',
-                        'lg': '16px',
-                        'xl': '20px',
-                        '2xl': '24px',
-                        '3xl': '32px',
-                        'full': '9999px',
-                        'button': '8px'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        .stats-card {
-            transition: transform 0.3s ease;
-        }
-        .stats-card:hover {
-            transform: translateY(-5px);
-        }
-        .news-card {
-            transition: transform 0.3s ease;
-        }
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
-    </style>
-</head>
-<body class="font-['Inter']">
-    <header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-12">
-                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
-                    <div class="hidden md:flex items-center gap-8">
-                        <a href="#" class="text-gray-700 hover:text-primary">About</a>
-                        <a href="#" class="text-gray-700 hover:text-primary">Academics</a>
-                        <a href="#" class="text-gray-700 hover:text-primary">Student Life</a>
-                        <a href="#" class="text-gray-700 hover:text-primary">News</a>
-                        <a href="#" class="text-gray-700 hover:text-primary">Contact</a>
-                    </div>
-                </div>
-                <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Apply Now</button>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="relative min-h-screen flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
-            <div class="container mx-auto px-6 relative">
-                <div class="max-w-2xl">
-                    <h1 class="text-5xl font-bold mb-6 leading-tight">Building Future Leaders Through Excellence in Education</h1>
-                    <p class="text-xl text-gray-700 mb-8">Join our vibrant academic community where innovation meets tradition, and every student's potential is unleashed.</p>
-                    <div class="flex gap-4">
-                        <button class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Discover Iliria</button>
-                        <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">Virtual Tour</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold mb-4">Welcome to Shkolla Iliria</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Where academic excellence meets character development, preparing students for success in an ever-changing world.</p>
-                </div>
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
-                        <div class="text-4xl font-bold text-primary mb-2">25+</div>
-                        <div class="text-gray-600">Years of Excellence</div>
-                    </div>
-                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
-                        <div class="text-4xl font-bold text-primary mb-2">98%</div>
-                        <div class="text-gray-600">Student Success Rate</div>
-                    </div>
-                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
-                        <div class="text-4xl font-bold text-primary mb-2">120+</div>
-                        <div class="text-gray-600">Qualified Teachers</div>
-                    </div>
-                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
-                        <div class="text-4xl font-bold text-primary mb-2">2000+</div>
-                        <div class="text-gray-600">Active Students</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-3 gap-12">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="ri-graduation-cap-line text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-4">Academic Excellence</h3>
-                        <p class="text-gray-600">Our rigorous curriculum and dedicated faculty ensure students achieve their highest potential.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="ri-group-line text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-4">Student Life</h3>
-                        <p class="text-gray-600">Rich extracurricular activities and a supportive community foster personal growth.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="ri-lightbulb-line text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-4">Innovation in Education</h3>
-                        <p class="text-gray-600">Modern teaching methods and technology integration prepare students for the future.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-16">Our Campus</h2>
-                <div class="grid md:grid-cols-4 gap-6">
-                    <div class="relative rounded-lg overflow-hidden group">
-                        <img src="https://public.readdy.ai/ai/img_res/86db78e393e1b6e8e340bf31c78164fb.jpg" alt="Modern Classroom" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-white text-center p-4">
-                                <h3 class="font-semibold mb-2">Modern Classrooms</h3>
-                                <p class="text-sm">State-of-the-art learning spaces</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative rounded-lg overflow-hidden group">
-                        <img src="https://public.readdy.ai/ai/img_res/afdfe05fad9855321a8fd883266f832a.jpg" alt="Science Lab" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-white text-center p-4">
-                                <h3 class="font-semibold mb-2">Science Labs</h3>
-                                <p class="text-sm">Equipped for hands-on learning</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative rounded-lg overflow-hidden group">
-                        <img src="https://public.readdy.ai/ai/img_res/614c188f8660ce11cd9501a391b8f4c3.jpg" alt="Sports Facility" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-white text-center p-4">
-                                <h3 class="font-semibold mb-2">Sports Facilities</h3>
-                                <p class="text-sm">Supporting athletic excellence</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative rounded-lg overflow-hidden group">
-                        <img src="https://public.readdy.ai/ai/img_res/eb4ddacb38b2e29ad85287fd0c31b483.jpg" alt="Library" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-white text-center p-4">
-                                <h3 class="font-semibold mb-2">Library</h3>
-                                <p class="text-sm">Resource-rich learning hub</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-16">Latest News & Updates</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
-                        <img src="https://public.readdy.ai/ai/img_res/277e505244037ac34817ac589bc3a067.jpg" alt="Science Fair" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="text-sm text-gray-500 mb-2">March 10, 2025</div>
-                            <h3 class="text-xl font-semibold mb-2">Annual Science Fair Showcases Student Innovation</h3>
-                            <p class="text-gray-600 mb-4">Students present groundbreaking projects at this year's science exhibition.</p>
-                            <a href="#" class="text-primary font-medium hover:underline">Read More</a>
-                        </div>
-                    </div>
-                    <div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
-                        <img src="https://public.readdy.ai/ai/img_res/ea8df0d9dc0e830e24441a3a74eff261.jpg" alt="Theater Performance" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="text-sm text-gray-500 mb-2">March 8, 2025</div>
-                            <h3 class="text-xl font-semibold mb-2">Spring Theater Production: "The Tempest"</h3>
-                            <p class="text-gray-600 mb-4">Drama department brings Shakespeare's classic to life with modern twist.</p>
-                            <a href="#" class="text-primary font-medium hover:underline">Read More</a>
-                        </div>
-                    </div>
-                    <div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
-                        <img src="https://public.readdy.ai/ai/img_res/35c5a0c5d5a96dffc3860bd7cc10c1ec.jpg" alt="Academic Awards" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="text-sm text-gray-500 mb-2">March 5, 2025</div>
-                            <h3 class="text-xl font-semibold mb-2">Students Excel in National Academic Competition</h3>
-                            <p class="text-gray-600 mb-4">Our students bring home top honors in mathematics and science.</p>
-                            <a href="#" class="text-primary font-medium hover:underline">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 bg-primary text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-6">Join Our Academic Family</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">Take the first step towards an exceptional education journey. Applications for the 2025-2026 academic year are now open.</p>
-                <div class="flex gap-4 justify-center">
-                    <button class="px-8 py-3 bg-white text-primary !rounded-button hover:bg-gray-100 whitespace-nowrap">Apply Now</button>
-                    <button class="px-8 py-3 border-2 border-white text-white !rounded-button hover:bg-white/10 whitespace-nowrap">Contact Us</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
-                    <div class="space-y-2">
-                        <p>123 Education Street</p>
-                        <p>Tirana, Albania</p>
-                        <p>Phone: +355 XX XXX XXX</p>
-                        <p>Email: info@iliria.edu.al</p>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-primary">About Us</a></li>
-                        <li><a href="#" class="hover:text-primary">Admissions</a></li>
-                        <li><a href="#" class="hover:text-primary">Academic Programs</a></li>
-                        <li><a href="#" class="hover:text-primary">Student Life</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
-                    <div class="flex gap-4">
-                        <a href="#" class="hover:text-primary"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" class="hover:text-primary"><i class="ri-twitter-fill"></i></a>
-                        <a href="#" class="hover:text-primary"><i class="ri-instagram-fill"></i></a>
-                        <a href="#" class="hover:text-primary"><i class="ri-linkedin-fill"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
-                    <p class="mb-4">Stay updated with our latest news and events.</p>
-                    <div class="flex gap-2">
-                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-button bg-gray-800 border-none text-white w-full">
-                        <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p>&copy; 2025 Shkolla Iliria. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
-        <i class="ri-arrow-up-line"></i>
-    </button>
-
-    <script>
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.style.opacity = '1';
-            } else {
-                backToTop.style.opacity = '0';
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-</body>
-</html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Shkolla Iliria - Building Future Leaders</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+ <script>
+ tailwind.config = {
+ theme: {
+ extend: {
+ colors: {
+ primary: '#2563eb',
+ secondary: '#64748b'
+ },
+ borderRadius: {
+ 'none': '0px',
+ 'sm': '4px',
+ DEFAULT: '8px',
+ 'md': '12px',
+ 'lg': '16px',
+ 'xl': '20px',
+ '2xl': '24px',
+ '3xl': '32px',
+ 'full': '9999px',
+ 'button': '8px'
+ }
+ }
+ }
+ }
+ </script>
+ <style>
+ :where([class^="ri-"])::before { content: "\f3c2"; }
+ .stats-card {
+ transition: transform 0.3s ease;
+ }
+ .stats-card:hover {
+ transform: translateY(-5px);
+ }
+ .news-card {
+ transition: transform 0.3s ease;
+ }
+ .news-card:hover {
+ transform: translateY(-5px);
+ }
+ </style>
+ </head>
+ <body class="font-['Inter']">
+ <header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
+ <nav class="container mx-auto px-6 py-4">
+ <div class="flex items-center justify-between">
+ <div class="flex items-center gap-12">
+ <a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
+ <div class="hidden md:flex items-center gap-8">
+ <a href="#" class="text-gray-700 hover:text-primary">About</a>
+ <a href="#" class="text-gray-700 hover:text-primary">Academics</a>
+ <a href="#" class="text-gray-700 hover:text-primary">Student Life</a>
+ <a href="#" class="text-gray-700 hover:text-primary">News</a>
+ <a href="#" class="text-gray-700 hover:text-primary">Contact</a>
+ </div>
+ </div>
+ <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Apply Now</button>
+ </div>
+ </nav>
+ </header>
+ <main>
+ <section class="relative min-h-screen flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
+ <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+ <div class="container mx-auto px-6 relative">
+ <div class="max-w-2xl">
+ <h1 class="text-5xl font-bold mb-6 leading-tight">Building Future Leaders Through Excellence in Education</h1>
+ <p class="text-xl text-gray-700 mb-8">Join our vibrant academic community where innovation meets tradition, and every student's potential is unleashed.</p>
+ <div class="flex gap-4">
+ <button class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Discover Iliria</button>
+ <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">Virtual Tour</button>
+ </div>
+ </div>
+ </div>
+ </section>
+ <section class="py-24 bg-gray-50">
+ <div class="container mx-auto px-6">
+ <div class="text-center mb-16">
+ <h2 class="text-3xl font-bold mb-4">Welcome to Shkolla Iliria</h2>
+ <p class="text-gray-600 max-w-2xl mx-auto">Where academic excellence meets character development, preparing students for success in an ever-changing world.</p>
+ </div>
+ <div class="grid md:grid-cols-4 gap-8">
+ <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+ <div class="text-4xl font-bold text-primary mb-2">25+</div>
+ <div class="text-gray-600">Years of Excellence</div>
+ </div>
+ <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+ <div class="text-4xl font-bold text-primary mb-2">98%</div>
+ <div class="text-gray-600">Student Success Rate</div>
+ </div>
+ <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+ <div class="text-4xl font-bold text-primary mb-2">120+</div>
+ <div class="text-gray-600">Qualified Teachers</div>
+ </div>
+ <div class="stats-card bg-white p-8 rounded-lg shadow-sm text-center">
+ <div class="text-4xl font-bold text-primary mb-2">2000+</div>
+ <div class="text-gray-600">Active Students</div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <section class="py-24">
+ <div class="container mx-auto px-6">
+ <div class="text-center mb-16">
+ <h2 class="text-3xl font-bold mb-4">About Us</h2>
+ <p class="text-gray-600 max-w-2xl mx-auto">Discover our rich history, values, and the dedicated team that makes Shkolla Iliria a center of educational excellence.</p>
+ </div>
+ <div class="grid md:grid-cols-2 gap-12 mb-16">
+ <div>
+ <h3 class="text-2xl font-semibold mb-6">Our History</h3>
+ <p class="text-gray-600 mb-6">Founded in 1998, Shkolla Iliria has grown from a small local school to one of Albania's leading educational institutions. For over two decades, we have been committed to providing exceptional education that combines traditional values with modern teaching methods.</p>
+ <p class="text-gray-600">Throughout our journey, we have continuously evolved our curriculum and facilities to meet the changing needs of our students while maintaining our core commitment to academic excellence and character development.</p>
+ </div>
+ <div>
+ <img src="https://public.readdy.ai/ai/img_res/01dd9b1b8197acea7fd108e025bf2090.jpg" alt="School History" class="rounded-lg shadow-lg w-full h-full object-cover">
+ </div>
+ </div>
+ <div class="grid md:grid-cols-3 gap-8 mb-16">
+ <div class="bg-white p-8 rounded-lg shadow-sm">
+ <h3 class="text-xl font-semibold mb-4">Our Vision</h3>
+ <p class="text-gray-600">To be the leading educational institution that nurtures future leaders who are intellectually curious, morally upright, and globally minded.</p>
+ </div>
+ <div class="bg-white p-8 rounded-lg shadow-sm">
+ <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+ <p class="text-gray-600">To provide a comprehensive education that develops students' academic abilities, character, and leadership skills in a supportive and innovative learning environment.</p>
+ </div>
+ <div class="bg-white p-8 rounded-lg shadow-sm">
+ <h3 class="text-xl font-semibold mb-4">Our Values</h3>
+ <ul class="text-gray-600 space-y-2">
+ <li>• Excellence in all endeavors</li>
+ <li>• Integrity and ethical behavior</li>
+ <li>• Respect for diversity</li>
+ <li>• Community engagement</li>
+ <li>• Innovation and creativity</li>
+ </ul>
+ </div>
+ </div>
+ <div class="bg-gray-50 rounded-lg p-12">
+ <h3 class="text-2xl font-semibold mb-8 text-center">Our Leadership Team</h3>
+ <div class="grid md:grid-cols-3 gap-8">
+ <div class="text-center">
+ <img src="https://public.readdy.ai/ai/img_res/39f58e8262a07eb77ff0582f1f90779e.jpg" alt="Principal" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+ <h4 class="text-lg font-semibold mb-2">Dr. Elena Kovaci</h4>
+ <p class="text-primary font-medium mb-2">Principal</p>
+ <p class="text-gray-600 text-sm">Ph.D. in Educational Leadership with 20+ years of experience in education administration.</p>
+ </div>
+ <div class="text-center">
+ <img src="https://public.readdy.ai/ai/img_res/d4fe1b8848df2e9f7c6a1fa32c291eb1.jpg" alt="Vice Principal" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+ <h4 class="text-lg font-semibold mb-2">Mr. Adrian Berisha</h4>
+ <p class="text-primary font-medium mb-2">Vice Principal</p>
+ <p class="text-gray-600 text-sm">M.Ed. in Curriculum Development, specializing in STEM education innovation.</p>
+ </div>
+ <div class="text-center">
+ <img src="https://public.readdy.ai/ai/img_res/e0b6ae17ccd7cdb74a83b4fb4053d0fa.jpg" alt="Academic Director" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+ <h4 class="text-lg font-semibold mb-2">Mrs. Mira Hoxha</h4>
+ <p class="text-primary font-medium mb-2">Academic Director</p>
+ <p class="text-gray-600 text-sm">Expert in international education with focus on student achievement and well-being.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <section class="py-24 bg-gray-50">
+ <div class="container mx-auto px-6">
+ <h2 class="text-3xl font-bold text-center mb-16">Our Campus</h2>
+ <div class="grid md:grid-cols-4 gap-6">
+ <div class="relative rounded-lg overflow-hidden group">
+ <img src="https://public.readdy.ai/ai/img_res/86db78e393e1b6e8e340bf31c78164fb.jpg" alt="Modern Classroom" class="w-full h-64 object-cover">
+ <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+ <div class="text-white text-center p-4">
+ <h3 class="font-semibold mb-2">Modern Classrooms</h3>
+ <p class="text-sm">State-of-the-art learning spaces</p>
+ </div>
+ </div>
+ </div>
+ <div class="relative rounded-lg overflow-hidden group">
+ <img src="https://public.readdy.ai/ai/img_res/afdfe05fad9855321a8fd883266f832a.jpg" alt="Science Lab" class="w-full h-64 object-cover">
+ <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+ <div class="text-white text-center p-4">
+ <h3 class="font-semibold mb-2">Science Labs</h3>
+ <p class="text-sm">Equipped for hands-on learning</p>
+ </div>
+ </div>
+ </div>
+ <div class="relative rounded-lg overflow-hidden group">
+ <img src="https://public.readdy.ai/ai/img_res/614c188f8660ce11cd9501a391b8f4c3.jpg" alt="Sports Facility" class="w-full h-64 object-cover">
+ <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+ <div class="text-white text-center p-4">
+ <h3 class="font-semibold mb-2">Sports Facilities</h3>
+ <p class="text-sm">Supporting athletic excellence</p>
+ </div>
+ </div>
+ </div>
+ <div class="relative rounded-lg overflow-hidden group">
+ <img src="https://public.readdy.ai/ai/img_res/eb4ddacb38b2e29ad85287fd0c31b483.jpg" alt="Library" class="w-full h-64 object-cover">
+ <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+ <div class="text-white text-center p-4">
+ <h3 class="font-semibold mb-2">Library</h3>
+ <p class="text-sm">Resource-rich learning hub</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <section class="py-24">
+ <div class="container mx-auto px-6">
+ <h2 class="text-3xl font-bold text-center mb-16">Latest News & Updates</h2>
+ <div class="grid md:grid-cols-3 gap-8">
+ <div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
+ <img src="https://public.readdy.ai/ai/img_res/277e505244037ac34817ac589bc3a067.jpg" alt="Science Fair" class="w-full h-48 object-cover">
+ <div class="p-6">
+ <div class="text-sm text-gray-500 mb-2">March 10, 2025</div>
+ <h3 class="text-xl font-semibold mb-2">Annual Science Fair Showcases Student Innovation</h3>
+ <p class="text-gray-600 mb-4">Students present groundbreaking projects at this year's science exhibition.</p>
+ <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+ </div>
+ </div>
+ <div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
+ <img src="https://public.readdy.ai/ai/img_res/ea8df0d9dc0e830e24441a3a74eff261.jpg" alt="Theater Performance" class="w-full h-48 object-cover">
+ <div class="p-6">
+ <div class="text-sm text-gray-500 mb-2">March 8, 2025</div>
+ <h3 class="text-xl font-semibold mb-2">Spring Theater Production: "The Tempest"</h3>
+ <p class="text-gray-600 mb-4">Drama department brings Shakespeare's classic to life with modern twist.</p>
+ <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+ </div>
+ </div>
+ <div class="news-card bg-white rounded-lg overflow-hidden shadow-sm">
+ <img src="https://public.readdy.ai/ai/img_res/35c5a0c5d5a96dffc3860bd7cc10c1ec.jpg" alt="Academic Awards" class="w-full h-48 object-cover">
+ <div class="p-6">
+ <div class="text-sm text-gray-500 mb-2">March 5, 2025</div>
+ <h3 class="text-xl font-semibold mb-2">Students Excel in National Academic Competition</h3>
+ <p class="text-gray-600 mb-4">Our students bring home top honors in mathematics and science.</p>
+ <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <section class="py-24 bg-primary text-white">
+ <div class="container mx-auto px-6 text-center">
+ <h2 class="text-3xl font-bold mb-6">Join Our Academic Family</h2>
+ <p class="text-xl mb-8 max-w-2xl mx-auto">Take the first step towards an exceptional education journey. Applications for the 2025-2026 academic year are now open.</p>
+ <div class="flex gap-4 justify-center">
+ <button class="px-8 py-3 bg-white text-primary !rounded-button hover:bg-gray-100 whitespace-nowrap">Apply Now</button>
+ <button class="px-8 py-3 border-2 border-white text-white !rounded-button hover:bg-white/10 whitespace-nowrap">Contact Us</button>
+ </div>
+ </div>
+ </section>
+ </main>
+ <footer class="bg-gray-900 text-white py-16">
+ <div class="container mx-auto px-6">
+ <div class="grid md:grid-cols-4 gap-12">
+ <div>
+ <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+ <div class="space-y-2">
+ <p>123 Education Street</p>
+ <p>Tirana, Albania</p>
+ <p>Phone: +355 XX XXX XXX</p>
+ <p>Email: info@iliria.edu.al</p>
+ </div>
+ </div>
+ <div>
+ <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+ <ul class="space-y-2">
+ <li><a href="#" class="hover:text-primary">About Us</a></li>
+ <li><a href="#" class="hover:text-primary">Admissions</a></li>
+ <li><a href="#" class="hover:text-primary">Academic Programs</a></li>
+ <li><a href="#" class="hover:text-primary">Student Life</a></li>
+ </ul>
+ </div>
+ <div>
+ <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+ <div class="flex gap-4">
+ <a href="#" class="hover:text-primary"><i class="ri-facebook-fill"></i></a>
+ <a href="#" class="hover:text-primary"><i class="ri-twitter-fill"></i></a>
+ <a href="#" class="hover:text-primary"><i class="ri-instagram-fill"></i></a>
+ <a href="#" class="hover:text-primary"><i class="ri-linkedin-fill"></i></a>
+ </div>
+ </div>
+ <div>
+ <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+ <p class="mb-4">Stay updated with our latest news and events.</p>
+ <div class="flex gap-2">
+ <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-button bg-gray-800 border-none text-white w-full">
+ <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Subscribe</button>
+ </div>
+ </div>
+ </div>
+ <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+ <p>&copy; 2025 Shkolla Iliria. All rights reserved.</p>
+ </div>
+ </div>
+ </footer>
+ <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+ <i class="ri-arrow-up-line"></i>
+ </button>
+ <script>
+ const backToTop = document.getElementById('backToTop');
+ window.addEventListener('scroll', () => {
+ if (window.pageYOffset > 300) {
+ backToTop.style.opacity = '1';
+ } else {
+ backToTop.style.opacity = '0';
+ }
+ });
+ backToTop.addEventListener('click', () => {
+ window.scrollTo({
+ top: 0,
+ behavior: 'smooth'
+ });
+ });
+ </script>
+ </body>
+ </html>
