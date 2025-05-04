@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply - Shkolla Iliria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#64748b'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    .form-step { display: none; }
+    .form-step.active { display: block; animation: fadeIn 0.5s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .file-upload { border: 2px dashed #d1d5db; transition: all 0.3s ease; }
+    .file-upload:hover { border-color: #2563eb; background-color: #f8fafc; }
+    .form-input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+  </style>
+</head>
+<body class="font-['Inter']">
+  <header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-12">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+            <a href="#" class="text-gray-700 hover:text-primary">About</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Programs</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Admissions</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Contact</a>
+          </div>
+        </div>
+        <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Apply Now</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+      <div class="container mx-auto px-6 relative">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold mb-6 leading-tight">Apply to Shkolla Iliria</h1>
+          <p class="text-xl text-gray-700 mb-8">Begin your child's educational journey with our preschool through middle school programs.</p>
+          <div class="flex gap-4">
+            <a href="#application-form" class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Start Application</a>
+            <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">Schedule Tour</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Simple Admissions Process</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">For Preschool (Age 3+) through Grade 8</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-3xl mb-4 font-bold">1</div>
+            <h3 class="text-xl font-semibold mb-4">Submit Application</h3>
+            <p class="text-gray-600">Complete our online form (takes about 15 minutes)</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-3xl mb-4 font-bold">2</div>
+            <h3 class="text-xl font-semibold mb-4">School Visit</h3>
+            <p class="text-gray-600">Child assessment and family interview (preschool - grade 5)</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-3xl mb-4 font-bold">3</div>
+            <h3 class="text-xl font-semibold mb-4">Enrollment</h3>
+            <p class="text-gray-600">Receive decision within 10 business days</p>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
+          <h3 class="text-xl font-semibold mb-6">Age Requirements</h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Program</th>
+                  <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Age Requirement</th>
+                  <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Application Deadline</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preschool (Kopsht)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">3 years old by Sept 1</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Rolling admissions</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pre-School (Parashkollor)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">5 years old by Sept 1</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">March 15</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Elementary (1-5)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Grade-level appropriate</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">March 15</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Middle School (6-8)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Grade-level appropriate</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">February 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="application-form" class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Student Application</h2>
+            <p class="text-gray-600">Complete all sections. <span class="text-primary">*</span> indicates required fields.</p>
+          </div>
+          
+          <!-- Progress Bar -->
+          <div class="mb-12">
+            <div class="flex justify-between mb-2">
+              <span class="text-sm font-medium text-primary">Step <span id="current-step">1</span> of 3</span>
+              <span class="text-sm text-gray-600"><span id="percent-complete">0</span>% Complete</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div id="progress-bar" class="bg-primary h-2.5 rounded-full" style="width: 33%"></div>
+            </div>
+          </div>
+          
+          <form id="iliria-application" class="bg-white p-8 rounded-lg shadow-sm">
+            <!-- Step 1: Student & Family -->
+            <div id="step-1" class="form-step active">
+              <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Student & Family Information</h3>
+              </div>
+              
+              <h4 class="text-lg font-semibold mb-4 border-b pb-2">Student Details</h4>
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name <span class="text-primary">*</span></label>
+                  <input type="text" id="first-name" name="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+                <div>
+                  <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name <span class="text-primary">*</span></label>
+                  <input type="text" id="last-name" name="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+              </div>
+              
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="birth-date" class="block text-gray-700 font-medium mb-2">Date of Birth <span class="text-primary">*</span></label>
+                  <input type="date" id="birth-date" name="birth-date" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+                <div>
+                  <label for="gender" class="block text-gray-700 font-medium mb-2">Gender</label>
+                  <select id="gender" name="gender" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input">
+                    <option value="" selected>Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <label for="applying-grade" class="block text-gray-700 font-medium mb-2">Applying for <span class="text-primary">*</span></label>
+                <select id="applying-grade" name="applying-grade" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                  <option value="" disabled selected>Select Grade Level</option>
+                  <option value="preschool-3">Preschool (Kopsht - Age 3-4)</option>
+                  <option value="preschool-4">Preschool (Kopsht - Age 4-5)</option>
+                  <option value="pre-school">Pre-School (Parashkollor - Age 5-6)</option>
+                  <option value="1">Grade 1</option>
+                  <option value="2">Grade 2</option>
+                  <option value="3">Grade 3</option>
+                  <option value="4">Grade 4</option>
+                  <option value="5">Grade 5</option>
+                  <option value="6">Grade 6</option>
+                  <option value="7">Grade 7</option>
+                  <option value="8">Grade 8</option>
+                </select>
+              </div>
+              
+              <h4 class="text-lg font-semibold mb-4 border-b pb-2 mt-8">Parent/Guardian Information</h4>
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="parent1-name" class="block text-gray-700 font-medium mb-2">Primary Parent Name <span class="text-primary">*</span></label>
+                  <input type="text" id="parent1-name" name="parent1-name" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+                <div>
+                  <label for="parent1-relation" class="block text-gray-700 font-medium mb-2">Relationship <span class="text-primary">*</span></label>
+                  <select id="parent1-relation" name="parent1-relation" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="mother">Mother</option>
+                    <option value="father">Father</option>
+                    <option value="guardian">Guardian</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="parent1-email" class="block text-gray-700 font-medium mb-2">Email <span class="text-primary">*</span></label>
+                  <input type="email" id="parent1-email" name="parent1-email" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+                <div>
+                  <label for="parent1-phone" class="block text-gray-700 font-medium mb-2">Phone <span class="text-primary">*</span></label>
+                  <input type="tel" id="parent1-phone" name="parent1-phone" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+              </div>
+              
+              <div class="flex justify-between mt-12">
+                <div></div>
+                <button type="button" class="next-step px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90">Next: School History</button>
+              </div>
+            </div>
+            
+            <!-- Step 2: School History -->
+            <div id="step-2" class="form-step">
+              <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">School History</h3>
+                <p class="text-gray-600">For students applying to Grades 1-8 only</p>
+              </div>
+              
+              <div id="current-school-section" class="mb-8">
+                <div class="mb-6">
+                  <label for="current-school" class="block text-gray-700 font-medium mb-2">Current School (if applicable)</label>
+                  <input type="text" id="current-school" name="current-school" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input">
+                </div>
+                
+                <div class="mb-6">
+                  <label for="grade-level" class="block text-gray-700 font-medium mb-2">Current Grade Level</label>
+                  <select id="grade-level" name="grade-level" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input">
+                    <option value="" selected>Select Grade</option>
+                    <option value="preschool">Preschool</option>
+                    <option value="pre-school">Pre-School</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8</option>
+                  </select>
+                </div>
+                
+                <div class="mb-6">
+                  <label class="block text-gray-700 font-medium mb-2">Has the student ever received special education services?</label>
+                  <div class="flex items-center space-x-4">
+                    <label class="inline-flex items-center">
+                      <input type="radio" name="special-ed" value="yes" class="form-radio text-primary border-gray-300 focus:ring-primary">
+                      <span class="ml-2">Yes</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                      <input type="radio" name="special-ed" value="no" class="form-radio text-primary border-gray-300 focus:ring-primary" checked>
+                      <span class="ml-2">No</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <label for="reason-applying" class="block text-gray-700 font-medium mb-2">Why are you applying to Shkolla Iliria? <span class="text-primary">*</span></label>
+                <textarea id="reason-applying" name="reason-applying" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required></textarea>
+              </div>
+              
+              <div class="flex justify-between mt-12">
+                <button type="button" class="prev-step px-6 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5">Back</button>
+                <button type="button" class="next-step px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90">Next: Documents & Submit</button>
+              </div>
+            </div>
+            
+            <!-- Step 3: Documents & Submit -->
+            <div id="step-3" class="form-step">
+              <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Documents & Submission</h3>
+              </div>
+              
+              <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4">Required Documents</h4>
+                
+                <div class="space-y-6">
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2">Birth Certificate <span class="text-primary">*</span></label>
+                    <div class="file-upload p-8 text-center rounded-lg cursor-pointer mb-2">
+                      <input type="file" id="birth-certificate" name="birth-certificate" class="hidden" accept=".pdf,.jpg,.jpeg,.png" required>
+                      <i class="ri-upload-cloud-2-line text-3xl text-gray-400 mb-2"></i>
+                      <p class="text-gray-600">Click to upload or drag and drop</p>
+                      <p class="text-sm text-gray-500">Max file size: 5MB</p>
+                    </div>
+                    <div id="birth-certificate-preview" class="hidden mt-2 text-sm text-gray-600"></div>
+                  </div>
+                  
+                  <div id="report-card-section">
+                    <label class="block text-gray-700 font-medium mb-2">Most Recent Report Card (Grades 1-8)</label>
+                    <div class="file-upload p-8 text-center rounded-lg cursor-pointer mb-2">
+                      <input type="file" id="report-card" name="report-card" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                      <i class="ri-upload-cloud-2-line text-3xl text-gray-400 mb-2"></i>
+                      <p class="text-gray-600">Click to upload or drag and drop</p>
+                      <p class="text-sm text-gray-500">Max file size: 5MB</p>
+                    </div>
+                    <div id="report-card-preview" class="hidden mt-2 text-sm text-gray-600"></div>
+                  </div>
+                  
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2">Immunization Records <span class="text-primary">*</span></label>
+                    <div class="file-upload p-8 text-center rounded-lg cursor-pointer mb-2">
+                      <input type="file" id="immunization" name="immunization" class="hidden" accept=".pdf,.jpg,.jpeg,.png" required>
+                      <i class="ri-upload-cloud-2-line text-3xl text-gray-400 mb-2"></i>
+                      <p class="text-gray-600">Click to upload or drag and drop</p>
+                      <p class="text-sm text-gray-500">Max file size: 5MB</p>
+                    </div>
+                    <div id="immunization-preview" class="hidden mt-2 text-sm text-gray-600"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4">Application Fee</h4>
+                <p class="text-gray-600 mb-4">A non-refundable application fee of 3,000 ALL is required.</p>
+                <div class="flex items-center">
+                  <input type="checkbox" id="agree-fee" name="agree-fee" class="form-checkbox h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary" required>
+                  <label for="agree-fee" class="ml-2 block text-gray-700">I understand and agree to pay the application fee <span class="text-primary">*</span></label>
+                </div>
+              </div>
+              
+              <div class="mb-8">
+                <h4 class="text-lg font-semibold mb-4">Parent Statement</h4>
+                <div class="flex items-center">
+                  <input type="checkbox" id="confirm-accuracy" name="confirm-accuracy" class="form-checkbox h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary" required>
+                  <label for="confirm-accuracy" class="ml-2 block text-gray-700">I certify that all information provided is accurate <span class="text-primary">*</span></label>
+                </div>
+              </div>
+              
+              <div class="flex justify-between mt-12">
+                <button type="button" class="prev-step px-6 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5">Back</button>
+                <button type="submit" class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90">Submit Application</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admissions Info -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Admissions Information</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-calendar-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Important Dates</h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-2"></i>
+                <span>Preschool: Rolling admissions</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-2"></i>
+                <span>Grades 1-8 Priority Deadline: March 15</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-2"></i>
+                <span>School begins: September 5</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-money-dollar-circle-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Tuition</h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-2"></i>
+                <span>Preschool: 250,000 ALL/year</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-2"></i>
+                <span>Elementary: 300,000 ALL/year</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-2"></i>
+                <span>Middle School: 350,000 ALL/year</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-2"></i>
+                <span>Sibling discounts available</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-question-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Have Questions?</h3>
+            <p class="text-gray-600 mb-4">Our admissions team is happy to help!</p>
+            <div class="space-y-2">
+              <p class="flex items-center text-gray-700">
+                <i class="ri-mail-line text-primary mr-2"></i> admissions@iliria.edu.al
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="ri-phone-line text-primary mr-2"></i> +355 XX XXX XXXX
+              </p>
+            </div>
+            <button class="mt-4 px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <div class="space-y-2">
+            <p>123 Education Street</p>
+            <p>Tirana, Albania</p>
+            <p>Phone: +355 XX XXX XXX</p>
+            <p>Email: info@iliria.edu.al</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary">About Us</a></li>
+            <li><a href="#" class="hover:text-primary">Programs</a></li>
+            <li><a href="#" class="hover:text-primary">Admissions</a></li>
+            <li><a href="#" class="hover:text-primary">School Calendar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-primary"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-instagram-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-youtube-fill"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+          <p class="mb-4">Stay updated with school news</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-button bg-gray-800 border-none text-white w-full">
+            <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>&copy; 2025 Shkolla Iliria. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <script>
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.style.opacity = '1';
+      } else {
+        backToTop.style.opacity = '0';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Multi-step form functionality
+    const formSteps = document.querySelectorAll('.form-step');
+    const nextButtons = document.querySelectorAll('.next-step');
+    const prevButtons = document.querySelectorAll('.prev-step');
+    const progressBar = document.getElementById('progress-bar');
+    const currentStepDisplay = document.getElementById('current-step');
+    const percentComplete = document.getElementById('percent-complete');
+    let currentStep = 0;
+
+    function showStep(stepIndex) {
+      formSteps.forEach((step, index) => {
+        step.classList.toggle('active', index === stepIndex);
+      });
+      
+      // Update progress
+      const progress = ((stepIndex + 1) / formSteps.length) * 100;
+      progressBar.style.width = `${progress}%`;
+      currentStepDisplay.textContent = stepIndex + 1;
+      percentComplete.textContent = Math.round(progress);
+    }
+
+    // Next button click
+    nextButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const currentStepForm = formSteps[currentStep];
+        const requiredFields = currentStepForm.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+          if (!field.value) {
+            field.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            field.classList.remove('border-red-500');
+          }
+        });
+        
+        if (isValid) {
+          currentStep++;
+          if (currentStep >= formSteps.length) {
+            currentStep = formSteps.length - 1;
+          }
+          showStep(currentStep);
+        } else {
+          alert('Please complete all required fields before continuing.');
+        }
+      });
+    });
+
+    // Previous button click
+    prevButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        currentStep--;
+        if (currentStep < 0) {
+          currentStep = 0;
+        }
+        showStep(currentStep);
+      });
+    });
+
+    // File upload preview
+    const fileUploads = document.querySelectorAll('.file-upload-container input[type="file"]');
+    fileUploads.forEach(upload => {
+      upload.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const previewDiv = document.getElementById(`${e.target.id}-preview`);
+        const uploadBox = e.target.closest('.file-upload');
+        
+        if (file) {
+          previewDiv.textContent = `Selected: ${file.name}`;
+          previewDiv.classList.remove('hidden');
+          uploadBox.classList.add('border-primary', 'bg-primary/5');
+          uploadBox.querySelector('i').classList.replace('text-gray-400', 'text-primary');
+        }
+      });
+    });
+
+    // Make file upload boxes clickable
+    document.querySelectorAll('.file-upload').forEach(box => {
+      box.addEventListener('click', () => {
+        const fileInput = box.querySelector('input[type="file"]');
+        fileInput.click();
+      });
+      
+      // Drag and drop
+      box.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        box.classList.add('border-primary', 'bg-primary/5');
+      });
+      
+      box.addEventListener('dragleave', () => {
+        box.classList.remove('border-primary', 'bg-primary/5');
+      });
+      
+      box.addEventListener('drop', (e) => {
+        e.preventDefault();
+        box.classList.remove('border-primary', 'bg-primary/5');
+        const fileInput = box.querySelector('input[type="file"]');
+        fileInput.files = e.dataTransfer.files;
+        fileInput.dispatchEvent(new Event('change'));
+      });
+    });
+
+    // Show/hide grade-specific fields
+    const gradeSelect = document.getElementById('applying-grade');
+    if (gradeSelect) {
+      gradeSelect.addEventListener('change', (e) => {
+        const reportCardSection = document.getElementById('report-card-section');
+        const currentSchoolSection = document.getElementById('current-school-section');
+        
+        if (['preschool-3', 'preschool-4', 'pre-school'].includes(e.target.value)) {
+          reportCardSection.classList.add('hidden');
+          currentSchoolSection.classList.add('hidden');
+        } else {
+          reportCardSection.classList.remove('hidden');
+          currentSchoolSection.classList.remove('hidden');
+        }
+      });
+    }
+
+    // Form submission
+    const applicationForm = document.getElementById('iliria-application');
+    if (applicationForm) {
+      applicationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Application submitted successfully! We will contact you soon.');
+        applicationForm.reset();
+        showStep(0); // Reset to first step
+      });
+    }
+  </script>
+</body>
+</html>

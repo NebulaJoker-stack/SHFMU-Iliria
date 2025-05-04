@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Life - Shkolla Iliria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#64748b'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    .activity-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-item {
+      transition: all 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="font-['Inter']">
+  <header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-12">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+            <a href="#" class="text-gray-700 hover:text-primary">About</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Academics</a>
+            <a href="#" class="text-primary font-medium">Student Life</a>
+            <a href="#" class="text-gray-700 hover:text-primary">Contact</a>
+          </div>
+        </div>
+        <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Apply Now</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+      <div class="container mx-auto px-6 relative">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold mb-6 leading-tight">Vibrant Student Life at Iliria</h1>
+          <p class="text-xl text-gray-700 mb-8">Beyond the classroom, we nurture talents, build character, and create lifelong memories through diverse activities and experiences.</p>
+          <div class="flex gap-4">
+            <button class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Explore Activities</button>
+            <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">View Events</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Life at Iliria -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Life at Shkolla Iliria</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">A dynamic community where students grow, explore, and thrive</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="activity-card bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-team-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Community</h3>
+            <p class="text-gray-600">Our inclusive environment fosters friendships and a sense of belonging for all students.</p>
+          </div>
+          
+          <div class="activity-card bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-leaf-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Well-being</h3>
+            <p class="text-gray-600">We prioritize mental and physical health through comprehensive support programs.</p>
+          </div>
+          
+          <div class="activity-card bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-star-smile-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Happiness</h3>
+            <p class="text-gray-600">Joyful learning experiences create positive memories that last a lifetime.</p>
+          </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">A Day in the Life</h3>
+            <p class="text-gray-600 mb-6">From morning assemblies to after-school activities, each day at Iliria is filled with opportunities for growth, discovery, and fun.</p>
+            <ul class="text-gray-600 space-y-4 mb-6">
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-3"></i>
+                <span>Engaging academic classes with hands-on learning</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-3"></i>
+                <span>Community-building advisory sessions</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-3"></i>
+                <span>Creative arts and physical education</span>
+              </li>
+              <li class="flex items-start">
+                <i class="ri-checkbox-circle-fill text-primary mt-1 mr-3"></i>
+                <span>Clubs, sports, and extracurricular activities</span>
+              </li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <img src="https://public.readdy.ai/ai/img_res/01dd9b1b8197acea7fd108e025bf2090.jpg" alt="Classroom activity" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item">
+            <img src="https://public.readdy.ai/ai/img_res/277e505244037ac34817ac589bc3a067.jpg" alt="Students collaborating" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item">
+            <img src="https://public.readdy.ai/ai/img_res/35c5a0c5d5a96dffc3860bd7cc10c1ec.jpg" alt="Science experiment" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item">
+            <img src="https://public.readdy.ai/ai/img_res/ea8df0d9dc0e830e24441a3a74eff261.jpg" alt="Art class" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clubs & Activities -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Clubs & Activities</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Discover your passions and develop new skills through our diverse extracurricular programs</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="https://public.readdy.ai/ai/img_res/86db78e393e1b6e8e340bf31c78164fb.jpg" alt="Debate Club" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Debate Society</h3>
+              <p class="text-gray-600 mb-4">Develop public speaking and critical thinking skills through competitive debating.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Grades 6-12</span>
+                <a href="#" class="text-primary font-medium hover:underline">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="https://public.readdy.ai/ai/img_res/afdfe05fad9855321a8fd883266f832a.jpg" alt="Robotics Club" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Robotics Team</h3>
+              <p class="text-gray-600 mb-4">Design, build, and program robots for regional and national competitions.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Grades 4-12</span>
+                <a href="#" class="text-primary font-medium hover:underline">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="https://public.readdy.ai/ai/img_res/614c188f8660ce11cd9501a391b8f4c3.jpg" alt="Music Club" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Music Ensemble</h3>
+              <p class="text-gray-600 mb-4">Join our choir, orchestra, or band and perform at school events.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">All Grades</span>
+                <a href="#" class="text-primary font-medium hover:underline">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="https://public.readdy.ai/ai/img_res/eb4ddacb38b2e29ad85287fd0c31b483.jpg" alt="Eco Club" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Eco Warriors</h3>
+              <p class="text-gray-600 mb-4">Lead sustainability initiatives and environmental projects on campus.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Grades 3-12</span>
+                <a href="#" class="text-primary font-medium hover:underline">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="https://public.readdy.ai/ai/img_res/5d0b3f7d8e0a3b7e1e3f8b5e5d3f7d8e.jpg" alt="Drama Club" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Drama Club</h3>
+              <p class="text-gray-600 mb-4">Participate in annual theater productions and develop performance skills.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Grades 5-12</span>
+                <a href="#" class="text-primary font-medium hover:underline">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <img src="https://public.readdy.ai/ai/img_res/a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4.jpg" alt="Sports Club" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Athletics Program</h3>
+              <p class="text-gray-600 mb-4">Compete in basketball, soccer, volleyball, and more at various skill levels.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Grades 4-12</span>
+                <a href="#" class="text-primary font-medium hover:underline">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">View All Clubs</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sports & Athletics -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Sports & Athletics</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Developing teamwork, discipline, and healthy lifestyles through competitive and recreational sports</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">Our Athletic Philosophy</h3>
+            <p class="text-gray-600 mb-6">At Iliria, we believe sports are an essential part of education, teaching valuable life skills beyond physical fitness. Our programs emphasize sportsmanship, perseverance, and personal growth.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-primary text-2xl mb-2">
+                  <i class="ri-trophy-line"></i>
+                </div>
+                <h4 class="font-semibold mb-1">32</h4>
+                <p class="text-gray-600 text-sm">Championship Titles</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-primary text-2xl mb-2">
+                  <i class="ri-team-line"></i>
+                </div>
+                <h4 class="font-semibold mb-1">18</h4>
+                <p class="text-gray-600 text-sm">Varsity Teams</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-primary text-2xl mb-2">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <h4 class="font-semibold mb-1">5</h4>
+                <p class="text-gray-600 text-sm">Athletic Facilities</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-primary text-2xl mb-2">
+                  <i class="ri-user-line"></i>
+                </div>
+                <h4 class="font-semibold mb-1">75%</h4>
+                <p class="text-gray-600 text-sm">Student Participation</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="https://public.readdy.ai/ai/img_res/f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3.jpg" alt="Basketball team" class="rounded-lg shadow-lg w-full">
+          </div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="activity-card bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-basketball-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Competitive Sports</h3>
+            <p class="text-gray-600 mb-4">Varsity teams competing in regional and national leagues</p>
+            <ul class="text-gray-600 text-sm space-y-2">
+              <li>Basketball</li>
+              <li>Soccer</li>
+              <li>Volleyball</li>
+              <li>Tennis</li>
+              <li>Swimming</li>
+            </ul>
+          </div>
+          
+          <div class="activity-card bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-heart-pulse-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Recreational Sports</h3>
+            <p class="text-gray-600 mb-4">Activities focused on fitness and fun</p>
+            <ul class="text-gray-600 text-sm space-y-2">
+              <li>Yoga</li>
+              <li>Martial Arts</li>
+              <li>Dance</li>
+              <li>Table Tennis</li>
+              <li>Chess</li>
+            </ul>
+          </div>
+          
+          <div class="activity-card bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center">
+            <div class="text-primary text-4xl mb-4">
+              <i class="ri-medal-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Athletic Development</h3>
+            <p class="text-gray-600 mb-4">Programs to enhance performance</p>
+            <ul class="text-gray-600 text-sm space-y-2">
+              <li>Strength Training</li>
+              <li>Sports Nutrition</li>
+              <li>Injury Prevention</li>
+              <li>College Recruitment</li>
+              <li>Leadership Training</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Support -->
+    <section class="py-24 bg-primary text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-6">Student Support Services</h2>
+            <p class="text-xl mb-8">We provide comprehensive support to ensure every student thrives academically, socially, and emotionally.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                  <i class="ri-mental-health-line mr-3"></i> Counseling
+                </h3>
+                <p class="text-gray-200">Professional guidance for academic planning and personal development.</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                  <i class="ri-book-read-line mr-3"></i> Learning Support
+                </h3>
+                <p class="text-gray-200">Specialized assistance for diverse learning needs.</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                  <i class="ri-restaurant-line mr-3"></i> Nutrition
+                </h3>
+                <p class="text-gray-200">Healthy meal programs and nutritional education.</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                  <i class="ri-community-line mr-3"></i> Peer Mentoring
+                </h3>
+                <p class="text-gray-200">Upperclassmen guiding younger students through school life.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="https://public.readdy.ai/ai/img_res/39f58e8262a07eb77ff0582f1f90779e.jpg" alt="Counseling session" class="rounded-lg shadow-lg w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Student Voices</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Hear directly from our students about their Iliria experience</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">"The robotics club changed my life. I discovered my passion for engineering and made my best friends through competitions."</p>
+            <div class="flex items-center">
+              <img src="https://public.readdy.ai/ai/img_res/d4fe1b8848df2e9f7c6a1fa32c291eb1.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4 object-cover">
+              <div>
+                <h4 class="font-semibold">Klara D.</h4>
+                <p class="text-gray-500 text-sm">Grade 11, STEM Track</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">"I love how teachers encourage us to think critically. The debate team helped me find my voice and confidence."</p>
+            <div class="flex items-center">
+              <img src="https://public.readdy.ai/ai/img_res/e0b6ae17ccd7cdb74a83b4fb4053d0fa.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4 object-cover">
+              <div>
+                <h4 class="font-semibold">Endrit L.</h4>
+                <p class="text-gray-500 text-sm">Grade 9, Humanities</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">"Playing on the basketball team taught me discipline and teamwork. The school spirit at games is incredible!"</p>
+            <div class="flex items-center">
+              <img src="https://public.readdy.ai/ai/img_res/5d0b3f7d8e0a3b7e1e3f8b5e5d3f7d8e.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4 object-cover">
+              <div>
+                <h4 class="font-semibold">Arber M.</h4>
+                <p class="text-gray-500 text-sm">Grade 10, Varsity Athlete</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Calendar -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Upcoming Events</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Mark your calendars for these exciting student life events</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <div class="bg-primary text-white p-4 text-center">
+              <div class="text-2xl font-bold">15</div>
+              <div class="text-sm">MAR 2025</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Spring Music Festival</h3>
+              <p class="text-gray-600 mb-4">Annual showcase of student musical talent from all grade levels.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Auditorium, 6:00 PM</span>
+                <a href="#" class="text-primary font-medium hover:underline">Details</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <div class="bg-primary text-white p-4 text-center">
+              <div class="text-2xl font-bold">22</div>
+              <div class="text-sm">APR 2025</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Science Olympiad</h3>
+              <p class="text-gray-600 mb-4">Teams compete in exciting science challenges and demonstrations.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Science Wing, All Day</span>
+                <a href="#" class="text-primary font-medium hover:underline">Details</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-card bg-white rounded-lg overflow-hidden shadow-sm">
+            <div class="bg-primary text-white p-4 text-center">
+              <div class="text-2xl font-bold">05</div>
+              <div class="text-sm">MAY 2025</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Sports Day</h3>
+              <p class="text-gray-600 mb-4">House competitions in various athletic events for all students.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Athletic Fields, 9:00 AM</span>
+                <a href="#" class="text-primary font-medium hover:underline">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <button class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">View Full Calendar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gray-900 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Experience Iliria Student Life</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Schedule a campus visit to see our vibrant community in action</p>
+        <div class="flex gap-4 justify-center">
+          <button class="px-8 py-3 bg-white text-gray-900 !rounded-button hover:bg-gray-100 whitespace-nowrap">Book a Tour</button>
+          <button class="px-8 py-3 border-2 border-white text-white !rounded-button hover:bg-white/10 whitespace-nowrap">Contact Admissions</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <div class="space-y-2">
+            <p>123 Education Street</p>
+            <p>Tirana, Albania</p>
+            <p>Phone: +355 XX XXX XXX</p>
+            <p>Email: info@iliria.edu.al</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary">About Us</a></li>
+            <li><a href="#" class="hover:text-primary">Admissions</a></li>
+            <li><a href="#" class="hover:text-primary">Academic Programs</a></li>
+            <li><a href="#" class="hover:text-primary">Student Life</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-primary"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-twitter-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-instagram-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+          <p class="mb-4">Stay updated with our latest news and events.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-button bg-gray-800 border-none text-white w-full">
+            <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>&copy; 2025 Shkolla Iliria. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.style.opacity = '1';
+      } else {
+        backToTop.style.opacity = '0';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html> 
