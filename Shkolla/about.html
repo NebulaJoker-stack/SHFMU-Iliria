@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Shkolla Iliria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#64748b'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    .team-card {
+      transition: transform 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+    .value-card {
+      transition: all 0.3s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="font-['Inter']">
+  <header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-12">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+            <a href="#" class="text-primary font-medium">Rreth Nesh</a>
+            <a href="student.html" class="text-gray-700 hover:text-primary">Jeta stundetore</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary">Na kontaktoni</a>
+          </div>
+        </div>
+        <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Aplikoni</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+      <div class="container mx-auto px-6 relative">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold mb-6 leading-tight">Historia, vlerat dhe angazhimi ynë</h1>
+          <p class="text-xl text-gray-700 mb-8">Zbuloni themelin e ekselencës që e bën Shkolla Iliria lider në edukimin dhe zhvillimin e karakterit.</p>
+          <div class="flex gap-4">
+            <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">Historia jonë</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-6">Misioni dhe Vizioni ynë</h2>
+            <p class="text-gray-600 mb-6">Në SHFMU “Iliria”, ne jemi të përkushtuar të ofrojmë një arsim cilësor dhe gjithëpërfshirës që zhvillon potencialin e plotë të çdo nxënësi. Synojmë të krijojmë një ambient të sigurt, motivues dhe bashkëpunues, ku nxënësit mësojnë të jenë qytetarë të përgjegjshëm, të dijshëm dhe të përgatitur për sfidat e së ardhmes.</p>
+            <p class="text-gray-600 mb-8">Të jemi një institucion lider në arsim fillor dhe të mesëm të ulët në Kosovë, i njohur për inovacionin në mësimdhënie, përkushtimin ndaj nxënësve dhe ndërtimin e një komuniteti shkollor të bazuar në vlera, respekt dhe zhvillim të vazhdueshëm.</p>
+            <div class="flex gap-4">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <img src="https://public.readdy.ai/ai/img_res/01dd9b1b8197acea7fd108e025bf2090.jpg" alt="Students learning" class="rounded-lg shadow-lg h-64 w-full object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/277e505244037ac34817ac589bc3a067.jpg" alt="Science class" class="rounded-lg shadow-lg h-64 w-full object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/35c5a0c5d5a96dffc3860bd7cc10c1ec.jpg" alt="Graduation" class="rounded-lg shadow-lg h-64 w-full object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/ea8df0d9dc0e830e24441a3a74eff261.jpg" alt="Art class" class="rounded-lg shadow-lg h-64 w-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Historia jonë</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Nga fillimet e përulura për t'u bërë një qendër e përsosmërisë arsimore</p>
+        </div>
+        
+        <div class="relative">
+          <!-- Timeline -->
+          <div class="border-l-2 border-primary border-opacity-30 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+          
+          <!-- Timeline items -->
+          <div class="space-y-16">
+            <!-- Item 1 -->
+            <div class="relative flex md:flex-row flex-col items-center">
+              <div class="md:w-1/2 md:pr-16 md:text-right mb-4 md:mb-0">
+                <h3 class="text-xl font-semibold mb-2"> 1.Themelimi dhe vitet e para</h3>
+                <p class="text-gray-600">Shkolla Fillore dhe të Mesme të Ulët “Iliria” u themelua në vitet 1980 në lagjen Bregu i Diellit të Prishtinës. Që nga fillimi, shkolla ka pasur për qëllim ofrimin e një arsimi cilësor për nxënësit e saj, duke u fokusuar në zhvillimin intelektual dhe moral të tyre.</p>
+              </div>
+              <div class="absolute w-4 h-4 bg-primary rounded-full left-1/2 transform -translate-x-1/2"></div>
+              <div class="md:w-1/2 md:pl-16">
+                <img src="https://public.readdy.ai/ai/img_res/86db78e393e1b6e8e340bf31c78164fb.jpg" alt="Original building" class="rounded-lg shadow-lg w-full h-48 object-cover">
+              </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="relative flex md:flex-row flex-col items-center">
+              <div class="md:w-1/2 md:pr-16 md:order-1 md:text-left mb-4 md:mb-0">
+                <h3 class="text-xl font-semibold mb-2">2. Renovimi dhe modernizimi</h3>
+                <p class="text-gray-600">Në vitin 2022, shkolla iu nënshtrua një renovimi të thellë, përfshirë zëvendësimin e dritareve të vjetra me dritare moderne për të përmirësuar kushte të mësimit. Ky renovim ishte pjesë e një iniciative të Komunës së Prishtinës për përmirësimin e infrastrukturës shkollore.</p>
+              </div>
+              <div class="absolute w-4 h-4 bg-primary rounded-full left-1/2 transform -translate-x-1/2"></div>
+              <div class="md:w-1/2 md:pl-16 md:order-0 md:pr-16 md:text-right">
+                <img src="https://public.readdy.ai/ai/img_res/afdfe05fad9855321a8fd883266f832a.jpg" alt="New building" class="rounded-lg shadow-lg w-full h-48 object-cover">
+              </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="relative flex md:flex-row flex-col items-center">
+              <div class="md:w-1/2 md:pr-16 md:text-right mb-4 md:mb-0">
+                <h3 class="text-xl font-semibold mb-2">3. Ofrimi i arsimit</h3>
+                <p class="text-gray-600">Shkolla ofron arsim fillor dhe të mesëm të ulët për një numër të madh nxënësish nga zona përreth. Ajo njihet për stafin e saj të përkushtuar dhe për një ambient të favorshëm për mësim, ku nxënësit inkurajohen të zhvillojnë aftësitë e tyre intelektuale dhe sociale.</p>
+              </div>
+              <div class="absolute w-4 h-4 bg-primary rounded-full left-1/2 transform -translate-x-1/2"></div>
+              <div class="md:w-1/2 md:pl-16">
+                <img src="https://public.readdy.ai/ai/img_res/614c188f8660ce11cd9501a391b8f4c3.jpg" alt="Awards" class="rounded-lg shadow-lg w-full h-48 object-cover">
+              </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="relative flex md:flex-row flex-col items-center">
+              <div class="md:w-1/2 md:pr-16 md:order-1 md:text-left mb-4 md:mb-0">
+                <h3 class="text-xl font-semibold mb-2">4. Bashkëpunimi me komunitetin</h3>
+                <p class="text-gray-600">Gjatë gjithë historisë së saj, shkolla ka ruajtur një lidhje të ngushtë me komunitetin lokal. Ajo përfshin prindërit dhe organizata të ndryshme në aktivitete edukative dhe jashtëmësimore, duke forcuar rolin e saj si qendër komunitare dhe duke kontribuar në zhvillimin e përgjithshëm të lagjes Bregu i Diellit.</p>
+              </div>
+              <div class="absolute w-4 h-4 bg-primary rounded-full left-1/2 transform -translate-x-1/2"></div>
+              <div class="md:w-1/2 md:pl-16 md:order-0 md:pr-16 md:text-right">
+                <img src="https://public.readdy.ai/ai/img_res/eb4ddacb38b2e29ad85287fd0c31b483.jpg" alt="Technology" class="rounded-lg shadow-lg w-full h-48 object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Vlerat tona kryesore</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Parimet që drejtojnë gjithçka që bëjmë në Shkolla Iliria</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="value-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-lightbulb-flash-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Ekselencë</h3>
+            <p class="text-gray-600">Ne përpiqemi për standardet më të larta në akademikë, zhvillimin e karakterit dhe të gjitha aktivitetet e shkollës.</p>
+          </div>
+          
+          <div class="value-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-team-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Komuniteti</h3>
+            <p class="text-gray-600">Ne krijojmë një mjedis mbështetës ku studentët, mësuesit dhe familjet punojnë së bashku.</p>
+          </div>
+          
+          <div class="value-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-shield-star-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Integriteti</h3>
+            <p class="text-gray-600">Ne vlerësojmë ndershmërinë, sjelljen etike dhe marrjen e përgjegjësisë për veprimet tona.</p>
+          </div>
+          
+          <div class="value-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-global-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Perspektiva Globale</h3>
+            <p class="text-gray-600">We prepare students to be citizens of the world with cultural awareness and understanding.</p>
+          </div>
+          
+          <div class="value-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-heart-3-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Pasioni për të mësuar</h3>
+            <p class="text-gray-600">Ne frymëzojmë kuriozitet, kreativitet dhe një dashuri të përjetshme për të mësuar tek studentët tanë.</p>
+          </div>
+          
+          <div class="value-card bg-white p-8 rounded-lg shadow-sm">
+            <div class="text-primary text-3xl mb-4">
+              <i class="ri-leaf-line"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Qëndrueshmëria</h3>
+            <p class="text-gray-600">Ne mësojmë respekt për mjedisin tonë dhe përgjegjësi për brezat e ardhshëm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-primary text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Bëhuni pjesë e historisë sonë</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Bashkohuni me komunitetin Shkolla Iliria dhe jepini fëmijës tuaj dhuratën e një edukimi të jashtëzakonshëm.
+
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Na kontaktoni</h3>
+          <div class="space-y-2">
+            <p>Rruga Xheladin Hana, Bregu i diellit</p>
+            <p>Prishtinë, Kosovë</p>
+            <p>Phone: +383 38 220 883</p>
+            <p>Email: info@iliria.edu.rks</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-primary"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-twitter-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-instagram-fill"></i></a>
+            <a href="#" class="hover:text-primary"><i class="ri-linkedin-fill"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Buletini</h3>
+          <p class="mb-4">Qëndroni të përditësuar me lajmet dhe ngjarjet tona më të fundit.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-button bg-gray-800 border-none text-white w-full">
+            <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Abonohu</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>&copy; 2025 Shkolla Iliria. Të gjitha të drejtat e rezervuara.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.style.opacity = '1';
+      } else {
+        backToTop.style.opacity = '0';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

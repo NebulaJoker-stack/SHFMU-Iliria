@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplico - Shkolla Iliria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#64748b'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    .form-step { display: none; }
+    .form-step.active { display: block; animation: fadeIn 0.5s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .file-upload { border: 2px dashed #d1d5db; transition: all 0.3s ease; }
+    .file-upload:hover { border-color: #2563eb; background-color: #f8fafc; }
+    .form-input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+  </style>
+</head>
+<body class="font-['Inter']">
+  <header class="fixed w-full bg-white/95 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-12">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">Iliria</a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="text-gray-700 hover:text-primary">Kreu</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary">Rreth Nesh</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary">Kontakti</a>
+          </div>
+        </div>
+        <button class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Apliko Tani</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seksioni Hero -->
+    <section class="relative min-h-screen flex items-center pt-16" style="background-image: url('https://public.readdy.ai/ai/img_res/3046bfb7ee607b3f5afeb18676724bf6.jpg'); background-size: cover; background-position: center;">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+      <div class="container mx-auto px-6 relative">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold mb-6 leading-tight">Apliko në Shkollën Iliria</h1>
+          <p class="text-xl text-gray-700 mb-8">Nisni udhëtimin arsimor të fëmijës suaj me programet tona nga kopshti deri në shkollën e mesme.</p>
+          <div class="flex gap-4">
+            <a href="#application-form" class="px-8 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">Filloni Aplikimin</a>
+            <button class="px-8 py-3 border-2 border-primary text-primary !rounded-button hover:bg-primary/5 whitespace-nowrap">Caktoni Vizitën</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Procesi i Aplikimit -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Proces i Thjeshtë Aplikimi</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Për Kopshtin (Mosha 3+) deri në Klasa 8</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-3xl mb-4 font-bold">1</div>
+            <h3 class="text-xl font-semibold mb-4">Dërgoni Aplikimin</h3>
+            <p class="text-gray-600">Plotësoni formularin tonë online (do të marrë rreth 15 minuta)</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-3xl mb-4 font-bold">2</div>
+            <h3 class="text-xl font-semibold mb-4">Vizita në Shkollë</h3>
+            <p class="text-gray-600">Vlerësimi i fëmijës dhe intervista me familjen (kopsht - klasa 5)</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="text-primary text-3xl mb-4 font-bold">3</div>
+            <h3 class="text-xl font-semibold mb-4">Regjistrimi</h3>
+            <p class="text-gray-600">Merrni vendimin brenda 10 ditëve të punës</p>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
+          <h3 class="text-xl font-semibold mb-6">Kërkesat e Moshës</h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Programi</th>
+                  <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Kërkesa e Moshës</th>
+                  <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Afati i Aplikimit</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kopshti (Kopsht)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">3 vjeç deri më 1 shtator</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Aplikime të hapura gjatë gjithë vitit</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Para-Kopshti (Parashkollor)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">5 vjeç deri më 1 shtator</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">15 Mars</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Shkolla Fillore (1-5)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Mosha e përshtatshme për klasën</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">15 Mars</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Shkolla e Mesme (6-8)</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Mosha e përshtatshme për klasën</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">1 Shkurt</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulari i Aplikimit -->
+    <section id="application-form" class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Aplikimi për Student</h2>
+            <p class="text-gray-600">Plotësoni të gjitha seksionet. <span class="text-primary">*</span> tregon fushat e detyrueshme.</p>
+          </div>
+          
+          <!-- Barra e Progresit -->
+          <div class="mb-12">
+            <div class="flex justify-between mb-2">
+              <span class="text-sm font-medium text-primary">Hapi <span id="current-step">1</span> nga 3</span>
+              <span class="text-sm text-gray-600"><span id="percent-complete">0</span>% E Përfunduar</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div id="progress-bar" class="bg-primary h-2.5 rounded-full" style="width: 33%"></div>
+            </div>
+          </div>
+          
+          <form id="iliria-application" class="bg-white p-8 rounded-lg shadow-sm">
+            <!-- Hapi 1: Student & Familja -->
+            <div id="step-1" class="form-step active">
+              <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Informacioni i Studentit dhe Familjes</h3>
+              </div>
+              
+              <h4 class="text-lg font-semibold mb-4 border-b pb-2">Të Dhënat e Studentit</h4>
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="first-name" class="block text-gray-700 font-medium mb-2">Emri <span class="text-primary">*</span></label>
+                  <input type="text" id="first-name" name="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+                <div>
+                  <label for="last-name" class="block text-gray-700 font-medium mb-2">Mbiemri <span class="text-primary">*</span></label>
+                  <input type="text" id="last-name" name="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input" required>
+                </div>
+              </div>
+
+              <!-- Pjesa tjetër e formularit do të vijojë në një mesazh tjetër për shkak të kufizimit të karaktereve. -->
+              <div class="mb-6">
+                <label for="current-grade" class="block text-gray-700 font-medium mb-2">Current Grade (if applicable)</label>
+                <input type="text" id="current-grade" name="current-grade" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input">
+              </div>
+
+              <div class="mb-6">
+                <label for="previous-school" class="block text-gray-700 font-medium mb-2">Previous School (if applicable)</label>
+                <input type="text" id="previous-school" name="previous-school" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input">
+              </div>
+
+              <div class="mb-6">
+                <label for="reason-for-leaving" class="block text-gray-700 font-medium mb-2">Reason for Leaving Previous School</label>
+                <textarea id="reason-for-leaving" name="reason-for-leaving" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input"></textarea>
+              </div>
+
+              <div class="flex justify-between mt-12">
+                <button type="button" class="prev-step px-6 py-3 bg-gray-300 text-gray-700 !rounded-button hover:bg-gray-400">Back</button>
+                <button type="button" class="next-step px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90">Next: Health Information</button>
+              </div>
+            </div>
+
+          <!-- Step 3: Health Information -->
+          <div id="step-3" class="form-step">
+            <div class="mb-8">
+              <h3 class="text-2xl font-semibold mb-4 text-primary">Health Information</h3>
+              <p class="text-gray-600">Please provide relevant health information for your child.</p>
+            </div>
+
+            <div class="mb-6">
+              <label for="health-concerns" class="block text-gray-700 font-medium mb-2">Any Health Concerns?</label>
+              <textarea id="health-concerns" name="health-concerns" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input"></textarea>
+            </div>
+
+            <div class="mb-6">
+              <label for="medications" class="block text-gray-700 font-medium mb-2">Medications (if applicable)</label>
+              <textarea id="medications" name="medications" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input"></textarea>
+            </div>
+
+            <div class="mb-6">
+              <label for="allergies" class="block text-gray-700 font-medium mb-2">Allergies (if applicable)</label>
+              <textarea id="allergies" name="allergies" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-button form-input"></textarea>
+            </div>
+
+            <div class="flex justify-between mt-12">
+              <button type="button" class="prev-step px-6 py-3 bg-gray-300 text-gray-700 !rounded-button hover:bg-gray-400">Back</button>
+              <button type="submit" class="submit-form px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90">Submit Application</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-gray-800 text-white py-8">
+  <div class="container mx-auto text-center">
+    <p>&copy; 2025 Shkolla Iliria. All rights reserved.</p>
+    <div class="flex justify-center gap-4 mt-4">
+      <a href="#" class="text-white hover:text-primary"><i class="ri-facebook-fill text-2xl"></i></a>
+      <a href="#" class="text-white hover:text-primary"><i class="ri-twitter-fill text-2xl"></i></a>
+      <a href="#" class="text-white hover:text-primary"><i class="ri-linkedin-box-fill text-2xl"></i></a>
+      <a href="#" class="text-white hover:text-primary"><i class="ri-instagram-fill text-2xl"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Handle form steps and progress bar
+  const nextStepButtons = document.querySelectorAll('.next-step');
+  const prevStepButtons = document.querySelectorAll('.prev-step');
+  const formSteps = document.querySelectorAll('.form-step');
+  const progressBar = document.getElementById('progress-bar');
+  const currentStepDisplay = document.getElementById('current-step');
+  const percentCompleteDisplay = document.getElementById('percent-complete');
+
+  let currentStep = 1;
+  const totalSteps = formSteps.length;
+
+  nextStepButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (currentStep < totalSteps) {
+        formSteps[currentStep - 1].classList.remove('active');
+        currentStep++;
+        formSteps[currentStep - 1].classList.add('active');
+        updateProgress();
+      }
+    });
+  });
+
+  prevStepButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (currentStep > 1) {
+        formSteps[currentStep - 1].classList.remove('active');
+        currentStep--;
+        formSteps[currentStep - 1].classList.add('active');
+        updateProgress();
+      }
+    });
+  });
+
+  function updateProgress() {
+    const percentComplete = (currentStep / totalSteps) * 100;
+    progressBar.style.width = `${percentComplete}%`;
+    currentStepDisplay.textContent = currentStep;
+    percentCompleteDisplay.textContent = Math.round(percentComplete);
+  }
+</script>
+
+</body>
+</html>
